@@ -9,6 +9,11 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "Verworfenes Extremszenario - Jetzt geraten Klimaschutz-Programme ins Zwielicht – auch Habecks Strategie",
+      "url": "https://www.welt.de/wissenschaft/plus69fb23c5cd4a28c47001debd/klima-jetzt-geraten-klimaschutz-programme-ins-zwielicht-auch-robert-habecks-strategie.html",
+      "description": "Klimaforscher erklären ihr extremstes Szenario für unplausibel. Das Problem: Darauf berufen sich politische Vorhaben. Gesetze und Projekte der ehemaligen Ampel-Regierung geraten in den Fokus.",
+    },
+    {
       "title": "130.000 Euro Nachzahlung: Gehalts-Trick der Grünen fliegt auf",
       "url": "https://jungefreiheit.de/politik/deutschland/2026/130-000-euro-nachzahlung-gehalts-trick-der-gruenen-fliegt-auf/",
       "description": "Bei den Hamburger Grünen werden Vorstandsbezüge über Jahre als Aufwandsentschädigung verbucht. Nachdem sie erwischt werden, stuft die Rentenversicherung es als Gehalt ein und verlangt eine Nachzahlung. HAMBURG. Die Grünen haben über Jahre hinweg die Bezüge ihrer Parteiführung nicht korrekt angegeben und sind damit nun aufgeflogen. Nach einer Prüfung durch die Deutsche Rentenversicherung muss der Hamburger Landesverband 130.000 Euro an Sozialabgaben nachzahlen. Das geht aus internen Parteidokumenten hervor.",
