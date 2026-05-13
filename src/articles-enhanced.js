@@ -211,6 +211,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Grünen Chef ruft Bundeswehr-Soldaten zum „Desertieren“ auf",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/gruenen-chef-ruft-bundeswehr-soldaten-zum-desertieren-auf/",
+      "description": "Falls es einen AfD-Verteidigungsminister gebe, könnten Soldaten „immer noch desertieren“, meint Grünen-Chef Banaszak. Das ist aber eine schwere Straftat. Einen Angriff Russlands halte er für „wahrscheinlicher“ als einen AfD-Verteidigungsminister.",
+    },
+    {
       "title": "Stuttgarter Grünen-Stadträtin forderte die Tampons auf dem Herren-Klo",
       "url": "https://www.bild.de/regional/stuttgart/stuttgart-aktuell/stuttgarter-gruenen-stadtraetin-forderte-die-tampons-auf-dem-herren-klo-81682386.bild.html",
       "description": "Jitka Sklenarova (Grüne) hat das Tampon für Männer verlangt – und bekommen",
