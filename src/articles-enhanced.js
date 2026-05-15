@@ -211,6 +211,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Brandmauer in Sachsen hintergangen Grüner Antrag geht durch – dank BSW und AfD",
+      "url": "https://taz.de/Brandmauer-in-Sachsen-hintergangen/!6179085/",
+      "description": "Eine Erleichterung für kleine Schlachtbetriebe wird im sächsischen Landtag beschlossen, doch mit einer ungewollten Mehrheit. Die Grünen sind bestürzt.",
+    },
+    {
       "title": "Grünen Chef ruft Bundeswehr-Soldaten zum „Desertieren“ auf",
       "url": "https://jungefreiheit.de/politik/deutschland/2026/gruenen-chef-ruft-bundeswehr-soldaten-zum-desertieren-auf/",
       "description": "Falls es einen AfD-Verteidigungsminister gebe, könnten Soldaten „immer noch desertieren“, meint Grünen-Chef Banaszak. Das ist aber eine schwere Straftat. Einen Angriff Russlands halte er für „wahrscheinlicher“ als einen AfD-Verteidigungsminister.",
