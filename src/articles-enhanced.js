@@ -9,6 +9,11 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "Nach Ausrangierung der Horrorszenarien: Kippt jetzt das Karlsruher Klimaurteil?",
+      "url": "https://nius.de/politik/klimaurt",
+      "description": "Forscher, die dem Weltklimarat zuarbeiten, haben eine wegweisende Neubewertung vorgenommen. Die Klimamodelle werden neu sortiert. Besonders betroffen ist der extreme Hochemissionspfad SSP5-8.5 – jenes Szenario, das eine Erwärmung von rund fünf Grad bis Ende des Jahrhunderts beschreibt. Im neuen Modellierungsrahmen wird dieser Pfad nun als „unplausibel“ verworfen und ausrangiert.",
+    },
+    {
       "title": "Verworfenes Extremszenario - Jetzt geraten Klimaschutz-Programme ins Zwielicht – auch Habecks Strategie",
       "url": "https://www.welt.de/wissenschaft/plus69fb23c5cd4a28c47001debd/klima-jetzt-geraten-klimaschutz-programme-ins-zwielicht-auch-robert-habecks-strategie.html",
       "description": "Klimaforscher erklären ihr extremstes Szenario für unplausibel. Das Problem: Darauf berufen sich politische Vorhaben. Gesetze und Projekte der ehemaligen Ampel-Regierung geraten in den Fokus.",
