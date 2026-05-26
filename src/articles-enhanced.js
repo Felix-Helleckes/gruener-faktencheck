@@ -9,6 +9,11 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "Energiewende: Das grüne Geschäftsmodell bricht zusammen - Das Geschäftsmodell Offshore-Windkraft rechnet sich nicht und scheitert gerade vor unseren Augen.",
+      "url": "https://nius.de/wirtschaft/konzerne-steigen-aus-offshore-windkraft-aus",
+      "description": "Die Energiewende sollte nicht nur die Klimarettung sein, sondern auch noch ein großartiges Geschäftsmodell. Das wird uns stets erzählt, von Merkel über Habeck bis Merz. Doch genau dieses Geschäftsmodell scheitert gerade vor unseren Augen. Weil es eben wirtschaftlich nicht funktioniert. Energiekonzerne ziehen jetzt deswegen die Notbremse, um nicht noch mehr Milliarden zu verbrennen beziehungsweise in den Wind zu schreiben. Und das nicht nur in Deutschland.",
+    },
+    {
       "title": "Nach Ausrangierung der Horrorszenarien: Kippt jetzt das Karlsruher Klimaurteil?",
       "url": "https://nius.de/politik/klimaurt",
       "description": "Forscher, die dem Weltklimarat zuarbeiten, haben eine wegweisende Neubewertung vorgenommen. Die Klimamodelle werden neu sortiert. Besonders betroffen ist der extreme Hochemissionspfad SSP5-8.5 – jenes Szenario, das eine Erwärmung von rund fünf Grad bis Ende des Jahrhunderts beschreibt. Im neuen Modellierungsrahmen wird dieser Pfad nun als „unplausibel“ verworfen und ausrangiert.",
