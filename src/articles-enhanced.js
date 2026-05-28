@@ -221,6 +221,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Schlechte Umfragen: Nouripour (Grüne) will alle Landtagswahlen gleichzeitig, CDU und SPD stimmen zu",
+      "url": "https://apollo-news.net/schlechte-umfragen-nouripour-will-alle-landtagswahl-gleichzeitig-cdu-und-spd-stimmen-zu/",
+      "description": "Angesichts vieler Umfragen mit häufig schlechten Resultaten diskutieren Union, SPD und Grüne über weniger Wahltermine. Der Bürger soll seltener wählen dürfen, damit die Regierungen in Ruhe arbeiten können – mit Zeit zum „Luftholen und Reflektieren“.",
+    },
+    {
       "title": "Brandmauer in Sachsen hintergangen Grüner Antrag geht durch – dank BSW und AfD",
       "url": "https://taz.de/Brandmauer-in-Sachsen-hintergangen/!6179085/",
       "description": "Eine Erleichterung für kleine Schlachtbetriebe wird im sächsischen Landtag beschlossen, doch mit einer ungewollten Mehrheit. Die Grünen sind bestürzt.",
