@@ -221,6 +221,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Lärm aus Moschee ärgerte die Eigentümergemeinschaft: Cem Özdemir klagt Kurden aus seinem Wohnhaus",
+      "url": "https://www.berliner-zeitung.de/article/laerm-aus-moschee-aergerte-die-eigentuemergemeinschaft-cem-oezdemir-klagt-kurden-aus-seinem-wohnhaus-14731",
+      "description": "Cem Özdemir klagt gegen Kurden aus seinem Wohnhaus wegen Lärm aus Moschee",
+    },
+    {
       "title": "Schlechte Umfragen: Nouripour (Grüne) will alle Landtagswahlen gleichzeitig, CDU und SPD stimmen zu",
       "url": "https://apollo-news.net/schlechte-umfragen-nouripour-will-alle-landtagswahl-gleichzeitig-cdu-und-spd-stimmen-zu/",
       "description": "Angesichts vieler Umfragen mit häufig schlechten Resultaten diskutieren Union, SPD und Grüne über weniger Wahltermine. Der Bürger soll seltener wählen dürfen, damit die Regierungen in Ruhe arbeiten können – mit Zeit zum „Luftholen und Reflektieren“.",
