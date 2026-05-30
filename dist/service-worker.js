@@ -48,6 +48,28 @@ self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
 
+  // Force Network-First for navigation requests and the articles API
+  // so the overview is always fresh on each page load.
+  if (request.mode === 'navigate' || request.destination === 'document' || url.pathname === '/api/articles') {
+    event.respondWith(
+      fetch(request, { cache: 'no-cache' })
+        .then(response => {
+          if (!response || response.status !== 200 || response.type === 'error') {
+            return response;
+          }
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
+          return response;
+        })
+        .catch(() => {
+          return caches.match(request)
+            .then(response => response || new Response('Offline - Ressource nicht verfügbar', { status: 503 }));
+        })
+    );
+    return;
+  }
   // Für externe URLs (Articles): Network-First
   if (url.origin !== location.origin) {
     event.respondWith(
