@@ -124,7 +124,7 @@ export const articles = {
       "description": "Gruene Klima-Milliarden finanzieren indirekt Ruestungsindustrie",
     },
     {
-      "title": "Habeck-Kinofilm kostet Steuerzahler 270.000 Euro",
+      "title": "Habeck-Kinofilm kostete Steuerzahler 270.000 Euro",
       "url": "https://www.welt.de/politik/deutschland/article692d3df518d0e7737b929530/kinofilm-ueber-robert-habeck-erhaelt-270-000-euro-filmfoerderung.html",
       "description": "Habecks Kinofilm erhaelt 270.000 Euro Filmfoerderung von Steuerzahlern",
     },
@@ -144,7 +144,7 @@ export const articles = {
       "description": "CSU fordert Untersuchungsausschuss fuer Habeck unter Leitung von Huber",
     },
     {
-      "title": "Wachstum: Deutschland Letzter",
+      "title": "Unter Habeck als Wirtschaftsminister:Wachstum: Deutschland Letzter",
       "url": "https://jungefreiheit.de/wirtschaft/2023/wachstum-deutschland-letzter/",
       "description": "Deutschland bei Wachstum unter Gruenen Regierung Letzter in der EU",
     },
@@ -241,7 +241,7 @@ export const articles = {
       "description": "Eine Erleichterung für kleine Schlachtbetriebe wird im sächsischen Landtag beschlossen, doch mit einer ungewollten Mehrheit. Die Grünen sind bestürzt.",
     },
     {
-      "title": "Grünen Chef ruft Bundeswehr-Soldaten zum „Desertieren“ auf",
+      "title": "Grünen Chef Banaszak ruft Bundeswehr-Soldaten zum „Desertieren“ auf",
       "url": "https://jungefreiheit.de/politik/deutschland/2026/gruenen-chef-ruft-bundeswehr-soldaten-zum-desertieren-auf/",
       "description": "Falls es einen AfD-Verteidigungsminister gebe, könnten Soldaten „immer noch desertieren“, meint Grünen-Chef Banaszak. Das ist aber eine schwere Straftat. Einen Angriff Russlands halte er für „wahrscheinlicher“ als einen AfD-Verteidigungsminister.",
     },
