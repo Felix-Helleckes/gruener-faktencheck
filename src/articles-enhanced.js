@@ -221,6 +221,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Staatsanwaltschaft ermittelt gegen Grünen-Chef Banaszak",
+      "url": "https://www.bild.de/politik/inland/wegen-steuerhinterziehung-staatsanwaltschaft-ermittelt-gegen-gruenen-chef-banaszak-6a202d71639e3d502fd4a29b",
+      "description": "Steuer-Ärger für den Grünen-Chef wegen angeblicher Vergesslichkeit! Gegen Felix Banaszak (36) ermittelt die Staatsanwaltschaft – das teilte er selbst der Deutschen Presse-Agentur mit. Der Politiker hat nach eigener Aussage nach mehreren Umzügen innerhalb der Hauptstadt vergessen, seine Angaben zur Zweitwohnung beim Finanzamt in Berlin zu aktualisieren",
+    },
+    {
       "title": "Lärm aus Moschee ärgerte die Eigentümergemeinschaft: Cem Özdemir klagt Kurden aus seinem Wohnhaus",
       "url": "https://www.berliner-zeitung.de/article/laerm-aus-moschee-aergerte-die-eigentuemergemeinschaft-cem-oezdemir-klagt-kurden-aus-seinem-wohnhaus-14731",
       "description": "Cem Özdemir klagt gegen Kurden aus seinem Wohnhaus wegen Lärm aus Moschee",
