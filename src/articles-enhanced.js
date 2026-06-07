@@ -668,6 +668,11 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+      "title": "Nach Deutschlands UN-Blamage : Afrikaner treten gegen Baerbock nach",
+      "url": "https://www.bild.de/politik/ausland-und-internationales/nach-deutschlands-un-blamage-jetzt-treten-afrikaner-gegen-baerbock-nach-6a22bf539e32e33bafd53698",
+      "description": "Botswanas Alt-Präsident Mokgweetsi Masisi (64) schmunzelt noch heute über sein Treffen mit Baerbock in Berlin. Dabei sprach er bedeutende gemeinsame Themen an, fand aber nur wenig Gehör bei der Grünen-Chefin. Jetzt tritt auch der Präsident von Ghana, Nana Akufo-Addo (79), gegen Baerbock nach.",
+    },
+    {
       "title": "Annalena Baerbock bei Sandra Maischberger: Blamage mit Anlauf - FAZ",
       "url": "https://www.t-online.de/nachrichten/deutschland/aussenpolitik/id_101143450/bei-maischberger-annalena-baerbock-unterlaeuft-grober-fehler.html",
       "description": "Annalena Baerbock nennt Grönland bei \"Maischberger\" EU-Gebiet. Das ist falsch. Dass dort die EU-Außengrenze verläuft, klingt auch zweifelhaft.",
