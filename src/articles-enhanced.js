@@ -221,6 +221,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Totalitäre Tendenzen: Konservative Christen wehren sich gegen Grünen-Anfrage",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/totalitaere-tendenzen-konservative-christen-wehren-sich-gegen-gruenen-anfrage/",
+      "description": "In einer Kleinen Anfrage an die Bundesregierung stellen die Grünen Bezüge zwischen konservativen Christen und Rechtsextremismus her – und fordern staatliche Gegenmaßnahmen. In der JF melden sich jetzt Betroffene zu Wort. Sie sprechen von einem „totalitären“ Vorgehen der Grünen, das an die Methoden der DDR erinnert.",
+    },
+    {
       "title": "Staatsanwaltschaft ermittelt gegen Grünen-Chef Banaszak",
       "url": "https://www.bild.de/politik/inland/wegen-steuerhinterziehung-staatsanwaltschaft-ermittelt-gegen-gruenen-chef-banaszak-6a202d71639e3d502fd4a29b",
       "description": "Steuer-Ärger für den Grünen-Chef wegen angeblicher Vergesslichkeit! Gegen Felix Banaszak (36) ermittelt die Staatsanwaltschaft – das teilte er selbst der Deutschen Presse-Agentur mit. Der Politiker hat nach eigener Aussage nach mehreren Umzügen innerhalb der Hauptstadt vergessen, seine Angaben zur Zweitwohnung beim Finanzamt in Berlin zu aktualisieren",
