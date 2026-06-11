@@ -220,6 +220,11 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+     {
+      "title": "Mobbing-Affäre gegen Berliner Lehrer : Schwulenhass unter Muslimen? Grüne widerspricht Innenpolitische Sprecherin fürchtet „rassistische Narrative“",
+      "url": "https://www.bild.de/politik/inland/berlin-gruene-kaddor-sorge-um-rassistische-narrative-in-mobbing-affaere-682eb5ec5490234646b99dee",
+      "description": "In der Mobbing-Affäre um einen schwulen Lehrer in Berlin fordert Grünen-Innenpolitikerin Lamya Kaddor (46), nicht über Homophobie unter jungen Muslimen zu sprechen.",
+    },
     {
       "title": "Totalitäre Tendenzen: Konservative Christen wehren sich gegen Grünen-Anfrage",
       "url": "https://jungefreiheit.de/politik/deutschland/2026/totalitaere-tendenzen-konservative-christen-wehren-sich-gegen-gruenen-anfrage/",
