@@ -221,6 +221,11 @@ export const articles = {
   ],
   "Innenpolitik": [
      {
+      "title": "Christliche Influencer pflegen laut Verfassungsschutz Kontakte zur AfD",
+      "url": "https://www.zeit.de/gesellschaft/2026-06/verfassungsschutz-christliche-influencer-social-media-afd",
+      "description": "Sogenannte Christfluencer verbinden Rechtsextremismus mit christlicher Symbolik, warnen die Grünen. ",
+    },
+     {
       "title": "Mobbing-Affäre gegen Berliner Lehrer : Schwulenhass unter Muslimen? Grüne widerspricht Innenpolitische Sprecherin fürchtet „rassistische Narrative“",
       "url": "https://www.bild.de/politik/inland/berlin-gruene-kaddor-sorge-um-rassistische-narrative-in-mobbing-affaere-682eb5ec5490234646b99dee",
       "description": "In der Mobbing-Affäre um einen schwulen Lehrer in Berlin fordert Grünen-Innenpolitikerin Lamya Kaddor (46), nicht über Homophobie unter jungen Muslimen zu sprechen.",
