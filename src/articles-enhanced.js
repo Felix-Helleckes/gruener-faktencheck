@@ -14,6 +14,11 @@ export const articles = {
       "description": "Die Energiewende sollte nicht nur die Klimarettung sein, sondern auch noch ein großartiges Geschäftsmodell. Das wird uns stets erzählt, von Merkel über Habeck bis Merz. Doch genau dieses Geschäftsmodell scheitert gerade vor unseren Augen. Weil es eben wirtschaftlich nicht funktioniert. Energiekonzerne ziehen jetzt deswegen die Notbremse, um nicht noch mehr Milliarden zu verbrennen beziehungsweise in den Wind zu schreiben. Und das nicht nur in Deutschland.",
     },
     {
+      "title": "2,7 Millionen Euro : Grünen-Politikerin hat die höchsten Nebeneinkünfte",
+      "url": "https://www.bild.de/politik/inland/gruene-abgeordnete-ophelia-nick-hat-die-hoechsten-nebeneinkuenfte-im-bundestag-6a3931fc3131b31f75cc9a7d",
+      "description": "Die Grüne Abgeordnete Ophelia Nick hat die höchsten Nebeneinkünfte im Bundestag. Sie erhält jährlich über 2,7 Millionen Euro aus ihren Nebentätigkeiten.",
+    },
+    {
       "title": "Nach Ausrangierung der Horrorszenarien: Kippt jetzt das Karlsruher Klimaurteil?",
       "url": "https://nius.de/politik/klimaurt",
       "description": "Forscher, die dem Weltklimarat zuarbeiten, haben eine wegweisende Neubewertung vorgenommen. Die Klimamodelle werden neu sortiert. Besonders betroffen ist der extreme Hochemissionspfad SSP5-8.5 – jenes Szenario, das eine Erwärmung von rund fünf Grad bis Ende des Jahrhunderts beschreibt. Im neuen Modellierungsrahmen wird dieser Pfad nun als „unplausibel“ verworfen und ausrangiert.",
