@@ -225,6 +225,11 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      "title": "Partei-Aufruf via Newsletter Grüne wollen AfD-Parteitag „verhindern“: Kritiker sieht darin „Angriff auf Grundrechte“",
+      "url": "https://www.noz.de/deutschland-welt/politik/artikel/afd-parteitag-verhindern-was-meinen-die-gruenen-wirklich-damit-50766346",
+      "description": "Die Kölner Grünen rufen ihre Mitglieder dazu auf, den AfD Bundesparteitag Anfang Juli zu verhindern.",
+    },
      {
       "title": "Christliche Influencer pflegen laut Verfassungsschutz Kontakte zur AfD",
       "url": "https://www.zeit.de/gesellschaft/2026-06/verfassungsschutz-christliche-influencer-social-media-afd",
