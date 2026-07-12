@@ -226,6 +226,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Göring-Eckardt darf mit 3 Prozent in den Bundestag",
+      "url": "https://www.bild.de/politik/inland/gruene-goering-eckardt-erhielt-nur-3-prozent-und-ist-im-bundestag-67bef099a5e55e49f311c012",
+      "description": "Da kann die Grünen-Politikerin von Glück reden, dass es bei der Bundestagswahl keine Fünf-Prozent-Hürde für Spitzenkandidaten gibt! 23 Wahlkreis-Gewinner bekommen kein Bundestags-Mandat, obwohl ihnen die Wähler in ihrer Region das größte Vertrauen ausgesprochen haben. Selbst einige Kandidaten mit Ergebnissen von über 30 Prozent gucken in die Röhre.",
+    },
+    {
       "title": "Partei-Aufruf via Newsletter Grüne wollen AfD-Parteitag „verhindern“: Kritiker sieht darin „Angriff auf Grundrechte“",
       "url": "https://www.noz.de/deutschland-welt/politik/artikel/afd-parteitag-verhindern-was-meinen-die-gruenen-wirklich-damit-50766346",
       "description": "Die Kölner Grünen rufen ihre Mitglieder dazu auf, den AfD Bundesparteitag Anfang Juli zu verhindern.",
