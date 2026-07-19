@@ -8,6 +8,11 @@
 
 export const articles = {
   "Wirtschaft": [
+     {
+      "title": "Habeck wusste als Wirtschaftsminister nicht, wass eine Insolvenz ist.",
+      "url": "https://www.spiegel.de/politik/deutschland/robert-habeck-nach-aussagen-zu-moeglicher-insolvenzwelle-in-der-kritik-a-24d007ed-0e05-414f-bac3-b2831706fa65",
+      "description": "Auftritt bei »Maischberger« Habeck nach vermurkster Aussage zu Insolvenzen in der Kritik Kommt es angesichts der Energiekrise und steigender Preise zu massenhaften Insolvenzen? Wirtschaftsminister Habeck geht nicht davon aus – doch in einer Talkshow geriet er ins Schwimmen. Die Opposition feixt.",
+    },
     {
       "title": "Energiewende: Das grüne Geschäftsmodell bricht zusammen - Das Geschäftsmodell Offshore-Windkraft rechnet sich nicht und scheitert gerade vor unseren Augen.",
       "url": "https://nius.de/wirtschaft/konzerne-steigen-aus-offshore-windkraft-aus",
