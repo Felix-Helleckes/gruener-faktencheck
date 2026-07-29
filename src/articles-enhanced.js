@@ -231,6 +231,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "2,7 Millionen Euro seit Beginn der Wahlperiode: Grünen-Politikerin Nick hat die höchsten Nebeneinkünfte im Bundestag",
+      "url": "https://www.tagesspiegel.de/politik/27-millionen-euro-seit-beginn-der-wahlperiode-grunen-politikerin-nick-hat-die-hochsten-nebeneinkunfte-im-bundestag-15744514.html",
+      "description": "2,7 Millionen Euro seit Beginn der Wahlperiode: Grünen-Politikerin Nick hat die höchsten Nebeneinkünfte im Bundestag",
+    },
+    {
       "title": "Göring-Eckardt darf mit 3 Prozent in den Bundestag",
       "url": "https://www.bild.de/politik/inland/gruene-goering-eckardt-erhielt-nur-3-prozent-und-ist-im-bundestag-67bef099a5e55e49f311c012",
       "description": "Da kann die Grünen-Politikerin von Glück reden, dass es bei der Bundestagswahl keine Fünf-Prozent-Hürde für Spitzenkandidaten gibt! 23 Wahlkreis-Gewinner bekommen kein Bundestags-Mandat, obwohl ihnen die Wähler in ihrer Region das größte Vertrauen ausgesprochen haben. Selbst einige Kandidaten mit Ergebnissen von über 30 Prozent gucken in die Röhre.",
