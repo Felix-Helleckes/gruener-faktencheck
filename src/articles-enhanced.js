@@ -231,6 +231,16 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Grünes Licht für Enteignungen: Banaszaks fahrlässiger Kurs",
+      "url": "https://www.focus.de/kultur/kino-tv/gruenes-licht-fuer-enteignungen-banaszaks-fahrlaessiger-kurs_ae442840-3159-4701-afab-56ce165f5318.html",
+      "description": "Die Landtagswahlen im Osten stehen an, die AfD liegt in Umfragen vorne. In Berlin könnten die Grünen aber mitregieren. Früher wurden dort Häuser besetzt. Jetzt fordern die Linken sogar Enteignungen. Der Grünen-Vorsitzende Banaszak geht da irgendwie mit. Ernsthaft?",
+    },
+    {
+      "title": "Spitzen-Grüne tritt zurück nach Belästigungsvorwürfen",
+      "url": "https://nius.de/nachrichten/gruene-oehlrich-ruecktritt-belaestigungsvorwuerfe",
+      "description": "Es geht um Vorwürfe wegen Belästigung und Machtmissbrauchs, wegen der die Politikerin bereits seit Längerem in der Kritik steht.",
+    },
+    {
       "title": "2,7 Millionen Euro seit Beginn der Wahlperiode: Grünen-Politikerin Nick hat die höchsten Nebeneinkünfte im Bundestag",
       "url": "https://www.tagesspiegel.de/politik/27-millionen-euro-seit-beginn-der-wahlperiode-grunen-politikerin-nick-hat-die-hochsten-nebeneinkunfte-im-bundestag-15744514.html",
       "description": "2,7 Millionen Euro seit Beginn der Wahlperiode: Grünen-Politikerin Nick hat die höchsten Nebeneinkünfte im Bundestag",
