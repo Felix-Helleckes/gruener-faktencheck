@@ -1,9 +1,0 @@
-# RSS Feed Content-Type
-<FilesMatch "\.xml$">
-  AddType application/rss+xml .xml
-</FilesMatch>
-
-# GZIP Kompression für Feed
-<FilesMatch "feed\.xml$">
-  Header set Content-Encoding gzip
-</FilesMatch>

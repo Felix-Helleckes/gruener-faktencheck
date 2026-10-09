@@ -1,2 +1,5 @@
 /node_modules
 static_pages/
+/dist
+link-report.json
+link-report.md
