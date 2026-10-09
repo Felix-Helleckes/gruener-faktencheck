@@ -8,6 +8,61 @@
 
 export const articles = {
   "Wirtschaft": [
+    {
+      "title": "Habeck wird Berater bei Investmentgesellschaft – Miteigentümer profitierte von seinem Heizungsgesetz",
+      "url": "https://apollo-news.net/habeck-wird-berater-bei-investmentgesellschaft-miteigentmer-profitierte-von-seinem-heizungsgesetz/",
+      "description": "Der frühere Vizekanzler Robert Habeck wechselt zum 1. August als Senior Advisor zur dänischen Investmentgesellschaft Urban Partners. Miteigentümer ist die Viessmann Generations Group, die vom Gebäudeenergiegesetz unter Habeck profitierte. Auch der Verkauf von Viessmann Climate Solutions an Carrier Global für 12 Milliarden Euro wurde seinerzeit vom Wirtschaftsministerium unter Habeck geprüft und genehmigt.",
+    },
+    {
+      "title": "„Politisch versiert“: Habecks Staatssekretär soll erster Bundesbankvorstand der Grünen werden",
+      "url": "https://apollo-news.net/politisch-versiert-habecks-staatssekretr-soll-erster-bundesbankvorstand-der-grnen-werden/",
+      "description": "Laut Handelsblatt soll Philipp Nimmermann, zuvor Staatssekretär unter Robert Habeck im Bundeswirtschaftsministerium, in den Vorstand der Bundesbank einziehen. Er wäre der erste Grüne in diesem Gremium und würde den CDU-Politiker Burkhard Balz ablösen. Vorgeschlagen wird er von der Landesregierung Baden-Württembergs, wählen muss ihn der Bundesrat.",
+    },
+    {
+      "title": "„Klaffende Gerechtigkeitslücken“: Grüne wollen neue Steuer für „Extremvermögen“",
+      "url": "https://apollo-news.net/klaffende-gerechtigkeitslcken-grne-wollen-neue-steuer-fr-extremvermgen/",
+      "description": "Die Grünen-Fraktion will Vermögen ab 500 Millionen Euro mit zwei Prozent besteuern, ab einer Milliarde mit drei und ab zehn Milliarden mit vier Prozent. Die Abgabe soll dem Staat 20 Milliarden Euro im Jahr bringen; betroffen wären laut Fraktion nur wenige hundert Menschen, aber auch Betriebe. Die Steuerschuld soll gestundet werden können, wenn die Substanz eines Unternehmens angegriffen würde.",
+    },
+    {
+      "title": "„Wir haben keine ideologische Energiepolitik gemacht“, meint Grünen-Chefin Brantner über Habeck",
+      "url": "https://apollo-news.net/wir-haben-keine-ideologische-energiepolitik-gemacht-meint-gruenen-chefin-brantner-ueber-habeck/",
+      "description": "Bei Markus Lanz verteidigte Grünen-Chefin Franziska Brantner die Energiepolitik der Ampel und behauptete, es sei „keine ideologische Energiepolitik“ gemacht worden. Die hohen Strompreise führte sie auf den Iran-Krieg zurück – Lanz hielt dagegen, die Preise seien schon vorher hoch gewesen. Fehler räumte Brantner nur bei der Reihenfolge ein, etwa beim Heizungsgesetz; dass der Atomausstieg ein Fehler war, wollte sie nicht zugeben.",
+    },
+    {
+      "title": "„Die Energiewende sichert uns den Wohlstand“ – Banaszak offenbart seine grünen Wolkenschlösser",
+      "url": "https://apollo-news.net/die-energiewende-sichert-uns-den-wohlstand-banaszak-offenbart-seine-gruenen-wolkenschloesser/",
+      "description": "Grünen-Chef Felix Banaszak behauptet im Bild-Interview: „Die Energiewende kostet uns nicht den Wohlstand, sie sichert uns den Wohlstand in der Zukunft.“ Als Baustein nennt er den Ausbau von Smart Metern, die bislang nur rund vier Prozent der deutschen Haushalte nutzen.",
+    },
+    {
+      "title": "Dank Steuern, Abgaben und der Energiewende: Weltweit haben nur drei Länder teureren Strom als Deutschland",
+      "url": "https://apollo-news.net/dank-steuern-abgaben-und-der-energiewende-weltweit-haben-nur-drei-laender-teureren-strom-als-deutschland/",
+      "description": "Nach einer Verivox-Auswertung zahlen deutsche Haushalte im zweiten Quartal 2026 durchschnittlich 35,6 Cent je Kilowattstunde – der höchste Wert aller G20-Staaten. Im Vergleich von 144 Ländern liegt Deutschland auf Rang vier; nur in Belgien, Bermuda und Irland ist Strom teurer. Der G20-Durchschnitt beträgt rund 16,3 Cent, mehr als 60 Prozent des deutschen Strompreises entfallen auf Steuern, Umlagen, Abgaben und Netzentgelte.",
+    },
+    {
+      "title": "Norwegen hat genug vom grünen Märchen der Energiewende – und zieht Deutschland buchstäblich den Stecker",
+      "url": "https://apollo-news.net/norwegen-hat-genug-vom-gruenen-maerchen-der-energiewende-und-zieht-deutschland-buchstaeblich-den-stecker/",
+      "description": "Norwegen glich bisher die durch Wind und Sonne entstehenden Schwankungen im europäischen Strommarkt aus. Energieminister Terje Aasland nennt das Konzept der norwegischen Wasserkraft als Ausgleichsspeicher für Europa inzwischen eine „fehlerhafte Idee“. Die Planung neuer Unterseekabel nach Europa wird bis mindestens 2029 eingefroren, während Norwegen neue Öl- und Gasfelder in der Barentssee erschließt.",
+    },
+    {
+      "title": "Kein wettbewerbsfähiger Weg: Wie sich die Utopie vom „grünen Stahl“ zerlegt",
+      "url": "https://jungefreiheit.de/wirtschaft/2026/wie-sich-die-utopie-vom-gruenen-stahl-zerlegt/",
+      "description": "Höhere Energie-, Wasserstoff- und Rohstoffkosten beerdigen die Vorstellung vom „grünen Stahl“. Eine PwC-Studie sieht für energieintensive Primarstahlproduktion in Mitteleuropa keinen wettbewerbsfähigen Weg und empfiehlt die Verlagerung an Standorte mit dauerhaften Kostenvorteilen. Die Investitionen in den Umbau der Stahl-Holding Saar sind von 3,5 auf 4,6 Milliarden Euro gestiegen, davon 2,6 Milliarden Euro Förderung von Bund und Saarland.",
+    },
+    {
+      "title": "Das Stahl-Debakel: Wie das falsche Versprechen vom grünen Wirtschaftswunder das Saarland ruiniert",
+      "url": "https://apollo-news.net/das-stahl-debakel-wie-das-falsche-versprechen-vom-grnen-wirtschaftswunder-das-saarland-ruiniert/",
+      "description": "Beim „Stahl-Aktionstag“ in Völklingen demonstrierten Tausende Beschäftigte für den Erhalt des EU-Emissionshandels, den CBAM-Klimazoll und staatliche Kaufgarantien für grünen Stahl. Klassischer Hochofenstahl kostet rund 450 Euro pro Tonne, grüner Stahl dagegen 800 bis 1.000 Euro. Das Umbauprojekt „Power4Steel“ hat ein Volumen von 4,6 Milliarden Euro, 2,6 Milliarden Euro Subventionen hat der Staat bereits zugesagt.",
+    },
+    {
+      "title": "Der Strommangel-Geheimplan der Bundesnetzagentur offenbart das Desaster der Energiewende",
+      "url": "https://apollo-news.net/der-strommangel-geheimplan-der-bundesnetzagentur-offenbart-das-desaster-der-energiewende/",
+      "description": "Die Bundesnetzagentur bereitet sich auf lang anhaltenden Strommangel vor und will im Ernstfall Fabriken herunterfahren. Seit 2024 arbeitet sie im Verborgenen an einer digitalen „Sicherheitsplattform Strom“, mit der bei künftigen Energiekrisen zentral gesteuert werden soll, welche Großverbraucher wie viel Strom erhalten.",
+    },
+    {
+      "title": "Münchens neue Luxus-Bäume sollen bis zu 95.000 Euro kosten – pro Stück",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/muenchens-neue-luxus-baeume-sollen-bis-zu-95-000-euro-kosten-pro-stueck/",
+      "description": "Noch bevor Dominik Krause (Grüne) sein Amt als Oberbürgermeister antritt, treibt München ein millionenschweres Begrünungsprojekt voran. Bis zu 150 neue Bäume sind geplant; allein für die ersten 24 Bäume sind 1,8 bis 2,3 Millionen Euro veranschlagt – 75.000 bis 95.000 Euro pro Baum. Die Stadt begründet die Kosten mit Leitungen und Kanälen im Untergrund sowie nötigem Wurzelschutz.",
+    },
      {
       "title": "Habeck wusste als Wirtschaftsminister nicht, was eine Insolvenz ist.",
       "url": "https://www.spiegel.de/politik/deutschland/robert-habeck-nach-aussagen-zu-moeglicher-insolvenzwelle-in-der-kritik-a-24d007ed-0e05-414f-bac3-b2831706fa65",
@@ -134,11 +189,6 @@ export const articles = {
       "description": "Gruene Klima-Milliarden finanzieren indirekt Ruestungsindustrie",
     },
     {
-      "title": "Habeck-Kinofilm kostete Steuerzahler 270.000 Euro",
-      "url": "https://www.welt.de/politik/deutschland/article692d3df518d0e7737b929530/kinofilm-ueber-robert-habeck-erhaelt-270-000-euro-filmfoerderung.html",
-      "description": "Habecks Kinofilm erhaelt 270.000 Euro Filmfoerderung von Steuerzahlern",
-    },
-    {
       "title": "Staatsanwaltschaft Dresden führt Ermittlungsverfahren gegen Robert Habeck",
       "url": "https://www.medienservice.sachsen.de/medien/news/1088002",
       "description": "Staatsanwaltschaft Dresden ermittelt in Verfahren gegen Habeck",
@@ -231,6 +281,71 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Nach OVG-Affäre besetzt grüner Justizminister erneut Spitzenposten mit langjähriger Vertrauter",
+      "url": "https://apollo-news.net/nach-ovg-affre-besetzt-grner-justizminister-erneut-spitzenposten-mit-langjhriger-vertrauter/",
+      "description": "NRW-Justizminister Benjamin Limbach hat seine langjährige Vertraute Sigrid Hellweg für die Leitung der Strafvollzugsabteilung seines Ministeriums ausgewählt – die Stelle wurde nur intern ausgeschrieben. Hellweg ist Rechtspflegerin und keine Volljuristin; der Posten wird nach B 7 mit mehr als 11.000 Euro brutto im Monat vergütet. Schon bei der Besetzung der OVG-Präsidentenstelle war Limbach vorgeworfen worden, eine langjährige Bekannte bevorzugt zu haben.",
+    },
+    {
+      "title": "Habeck bei Miosga: „Kann und will nicht mehr für die Grünen sprechen“ – aber keine neue Partei",
+      "url": "https://apollo-news.net/habeck-bei-miosga-kann-und-will-nicht-mehr-fr-die-grnen-sprechen-aber-keine-neue-partei/",
+      "description": "Robert Habeck sagte bei Caren Miosga, er könne und wolle nicht mehr für die Grünen sprechen, bleibe seiner Partei aber treu. Von einer neuen Partei halte er „gar nichts“. Zugleich widersprach er Cem Özdemirs konservativerer Migrationspolitik und warnte im Zusammenhang mit Antisemitismusvorwürfen gegen die Berliner Linke vor der AfD.",
+    },
+    {
+      "title": "Bizarrer Kulturkampf: Warum die Grünen mit einer Straße an eine Sklavenhändler-Dynastie erinnern",
+      "url": "https://jungefreiheit.de/kultur/gesellschaft/2026/warum-die-gruenen-mit-einer-strasse-an-eine-sklavenhaendler-dynastie-erinnern/",
+      "description": "In Köln-Nippes heißt die Nachtigal-Straße fortan Manga-Bellstraße. Die JF-Recherche bezeichnet die von Grünen vorangetriebene Umbenennung als Akt der Geschichtsklitterung und Steuergeldverschwendung – und verweist auf die Sklavenhändler-Vergangenheit der neuen Namensgeber.",
+    },
+    {
+      "title": "Hamburg muss ab 2040 klimaneutral sein – grüne Umweltsenatorin steigt auf klimaschädlicheres Dienstauto um",
+      "url": "https://apollo-news.net/hamburg-muss-ab-2040-klimaneutral-sein-ausgerechnet-gruene-umweltsenatorin-steigt-auf-klimaschaedlicheres-dienstauto-um/",
+      "description": "Nach Daten der Deutschen Umwelthilfe stieg der CO2-Ausstoß der Dienstwagen Hamburger Senatoren 2025 von 102 auf 117 Gramm pro Kilometer; die Stadt rutschte im Ländervergleich von Platz eins auf Platz vier. Ursache ist vor allem der Wechsel mehrerer Senatoren von Elektroautos zu Hybriden – darunter Umweltsenatorin Katharina Fegebank (Grüne). Im Oktober 2025 hatten 53,2 Prozent der Abstimmenden dem Klima-Volksbegehren mit dem Ziel Klimaneutralität bis 2040 zugestimmt.",
+    },
+    {
+      "title": "„Taktisch wählen“: Wegen Grünen-Spende ist Ramelow sauer auf Campact",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/wegen-gruenen-spende-ramelow-ist-sauer-auf-campact/",
+      "description": "Der Verein Campact hat den Grünen eine Spende von 150.000 Euro zukommen lassen. Bundestagsvizepräsident Bodo Ramelow (Linke) schrieb daraufhin auf X, Campact sei „nichts weiter als eine willige, aber nicht ganz billige B90/Grüne-Vorfeldorganisation“. Campact begründet die Unterstützung damit, eine AfD-BSW-Mehrheit im Schweriner Landtag verhindern zu wollen.",
+    },
+    {
+      "title": "„Strategisch wählen“: Campact gönnt Grünen auch in Mecklenburg-Vorpommern Großspende",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/campact-goennt-gruenen-auch-in-mecklenburg-vorpommern-grossspende/",
+      "description": "Kurz vor der Landtagswahl in Mecklenburg-Vorpommern meldeten die Grünen eine Unterstützung von Campact im Wert von 150.000 Euro als Teil der Kampagne „Strategisch wählen“. Der Verein will damit nach eigenen Angaben verhindern, dass AfD und BSW gemeinsam eine Mehrheit im Schweriner Landtag erreichen.",
+    },
+    {
+      "title": "EU-Parlament: Grünen-Politiker bringt Geld-Entzug für Sachsen-Anhalt ins Spiel",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/gruenen-politiker-bringt-geld-entzug-fuer-sachsen-anhalt-ins-spiel/",
+      "description": "Der Grünen-Europaabgeordnete Daniel Freund erwägt, Sachsen-Anhalt die EU-Regionalförderung zu streichen, falls die AfD die Landesregierung übernimmt. Gegenüber der Tagesschau sagte er, die „Europäische Kommission müsste im Zweifel auch Gelder zurückhalten“. Sachsen-Anhalt erhält in der Förderperiode 2021 bis 2027 insgesamt 2,9 Milliarden Euro aus dem EU-Haushalt.",
+    },
+    {
+      "title": "Wahlkampf in Sachsen-Anhalt: Ehemann von Grünen-Spitzenkandidatin soll Neonazi gewesen sein",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/ehemann-von-gruenen-spitzenkandidatin-soll-neonazi-gewesen-sein/",
+      "description": "Dem Ehemann der Grünen-Spitzenkandidatin Susan Sziborra-Seidlitz wird vorgeworfen, in den 1990er Jahren in der neonazistischen Szene in Quedlinburg aktiv gewesen zu sein. Ein Antifa-Magazin von 1995 nennt ihn als „stadtbekannten Neonazi“ und ordnet ihn der Gruppe „Deutsche Recken“ zu. Heute ist er Grünen-Regionalgeschäftsführer für Sachsen-Anhalt Mitte; die Politikerin bezeichnete ihren Mann als „lupenreinen Demokraten“.",
+    },
+    {
+      "title": "Glashaus-Studie: Grüne hui, AfD pfui? So einseitig berichten die ARD-Tagesthemen",
+      "url": "https://jungefreiheit.de/kultur/medien/2026/gruene-hui-afd-pfui-so-einseitig-berichten-die-ard-tagesthemen/",
+      "description": "Viele Bürger beschweren sich über die Einseitigkeit des öffentlich-rechtlichen Rundfunks, belastbare Daten dazu gab es lange nicht. Die Berliner Initiative Glashaus Technologies hat deshalb tausende Ausgaben der ARD-„Tagesthemen“ ausgewertet.",
+    },
+    {
+      "title": "Soll Neutralität des ÖRR prüfen: Ex-Grünen-Referentin wird Vorsitzende des neuen Medienrats",
+      "url": "https://apollo-news.net/soll-neutralitaet-des-oerr-pruefen-ex-gruenen-referentin-wird-vorsitzende-des-medienrats/",
+      "description": "Beatrice Sauerbrey, früher Referentin der Grünen, ist seit dem 15. August Geschäftsführerin des neuen Medienrats des öffentlich-rechtlichen Rundfunks und baut dessen Geschäftsstelle an der Universität Weimar auf. Das Gremium prüft, ob ARD, ZDF und Deutschlandradio ihren gesetzlichen Auftrag erfüllen, und soll alle zwei Jahre über Neutralität und Ausgewogenheit berichten. Sauerbrey war von 2015 bis 2024 Referentin der Grünen-Landtagsfraktion in Thüringen und leitete ab 2022 den Programmausschuss Leipzig im MDR-Rundfunkrat.",
+    },
+    {
+      "title": "MDR-Wahlkampfarena: Migration laut grüner Kandidatin „Problem, dass wir real nicht haben“",
+      "url": "https://apollo-news.net/mdr-wahlkampfarena-migration-laut-gruener-kandidatin-problem-dass-wir-real-nicht-haben/",
+      "description": "Bei der MDR-Wahlkampfarena geht es vor allem um Migration. Die Kandidaten von SPD, Grünen und Linkspartei versuchen, die seit über zehn Jahren bestehenden Probleme kleinzureden, und verstricken sich dabei in widersprüchliche Ausreden.",
+    },
+    {
+      "title": "„Propaganda-Schmierblätter“ und „Hetzportale“: Spitzenkandidat der Berliner Grünen attackiert Apollo News und NIUS",
+      "url": "https://apollo-news.net/propaganda-schmierblaetter-und-hetzportale-berliner-gruenen-spitzenkandidat-attackiert-apollo-news/",
+      "description": "Werner Graf, Spitzenkandidat der Berliner Grünen, hat Apollo News und NIUS im Podcast „Jung & Naiv“ als „Propaganda-Schmierblätter“ und „Online-Hetzportale“ bezeichnet. Zugleich wirbt er für ein „progressives Bündnis“ mit SPD und Linken in Berlin.",
+    },
+    {
+      "title": "Grünen-Stadtrat verbreitet gefälschtes Siegmund-Bild – AfD leitet rechtliche Schritte ein",
+      "url": "https://apollo-news.net/gruenen-stadtrat-verbreitet-gefaelschtes-siegmund-bild-afd-leitet-rechtliche-schritte-ein/",
+      "description": "Der Dessau-Roßlauer Grünen-Stadtrat Christoph Kaßner hat auf Facebook ein Bild verbreitet, das AfD-Spitzenkandidat Ulrich Siegmund mit einem unterschriebenen Stimmzettel zeigt. Die Bildunterschrift fordert AfD-Wähler auf, ihre Stimmzettel ebenfalls zu unterschreiben – was die Stimme ungültig machen kann. Die AfD-Landtagsfraktion erklärt, es handle sich um eine KI-generierte Fälschung, und hat rechtliche Schritte eingeleitet.",
+    },
+    {
       "title": "Grünes Licht für Enteignungen: Banaszaks fahrlässiger Kurs",
       "url": "https://www.focus.de/kultur/kino-tv/gruenes-licht-fuer-enteignungen-banaszaks-fahrlaessiger-kurs_ae442840-3159-4701-afab-56ce165f5318.html",
       "description": "Die Landtagswahlen im Osten stehen an, die AfD liegt in Umfragen vorne. In Berlin könnten die Grünen aber mitregieren. Früher wurden dort Häuser besetzt. Jetzt fordern die Linken sogar Enteignungen. Der Grünen-Vorsitzende Banaszak geht da irgendwie mit. Ernsthaft?",
@@ -243,7 +358,7 @@ export const articles = {
     {
       "title": "2,7 Millionen Euro seit Beginn der Wahlperiode: Grünen-Politikerin Nick hat die höchsten Nebeneinkünfte im Bundestag",
       "url": "https://www.tagesspiegel.de/politik/27-millionen-euro-seit-beginn-der-wahlperiode-grunen-politikerin-nick-hat-die-hochsten-nebeneinkunfte-im-bundestag-15744514.html",
-      "description": "2,7 Millionen Euro seit Beginn der Wahlperiode: Grünen-Politikerin Nick hat die höchsten Nebeneinkünfte im Bundestag",
+      "description": "Mehr als ein Drittel aller Bundestagsabgeordneten hat neben der Diät Nebeneinkünfte. Laut einer Analyse von „Spiegel“ und Abgeordnetenwatch verdienten 232 Parlamentarier seit Beginn der Wahlperiode zusammen 10,6 Millionen Euro dazu. Die höchste Summe erzielte Ophelia Nick (Grüne) mit 2,7 Millionen Euro, überwiegend aus Gewinnausschüttungen – vor Alexander Engelhard (CSU) mit 1,5 Millionen und Sebastian Maack (AfD) mit 439.000 Euro.",
     },
     {
       "title": "Göring-Eckardt darf mit 3 Prozent in den Bundestag",
@@ -621,11 +736,6 @@ export const articles = {
       "description": "Gruener Lemke in China Klimabetrug Ermittlungen involviert",
     },
     {
-      "title": "Katrin Goering Eckardt besucht Maja T in Ungarn",
-      "url": "https://www.welt.de/politik/deutschland/article256320388/Gefaengnis-Besuch-bei-Maja-T-Katrin-Goering-Eckardt-beklagt-Katastrophe-mitten-in-Europa.html",
-      "description": "Gruene Goering-Eckardt besucht inhaftierte Aktivisten in Ungarn",
-    },
-    {
       "title": "Jette Nietzard verherrlicht Gewalt gegen Polizisten und Reiche: Sprecherin der Grünen Jugend trägt „ACAB“-Pullover und „Eat the rich“-Cap",
       "url": "https://www.nius.de/politik/news/nietzard-verherrlicht-gewalt/e3c16462-97c1-4cef-8160-6db8f7548d55",
       "description": "Nietzard verherrlicht Gewalt gegen Polizisten mit ACAB Pullover",
@@ -708,15 +818,55 @@ export const articles = {
     {
       "title": "Bundesregierung ermöglicht Durchsuchungen von Redaktionen ohne Richter",
       "url": "https://jungefreiheit.de/kultur/medien/2026/bundesregierung-ermoeglicht-durchsuchungen-von-redaktionen-ohne-richter/",
-      "description": "",
+      "description": "Nach einem Kabinettsentwurf vom 17. Dezember sollen Bundesbehörden Redaktionen auch ohne richterliche Anordnung durchsuchen dürfen. Grundlage ist das Politische-Werbung-Transparenz-Gesetz, mit dem die EU-Verordnung zu politischer Werbung umgesetzt werden soll. Juristen und Verbände sehen darin einen schweren Eingriff in Pressefreiheit und Grundrechte.",
     },
     {
       "title": "New Yorks Bürgermeister schwört erstmals auf Koran statt Bibel",
       "url": "https://jungefreiheit.de/politik/ausland/2026/new-yorks-buergermeister-schwoert-erstmals-auf-koran-statt-bibel/",
-      "description": "",
+      "description": "Der neue New Yorker Bürgermeister Zohran Mamdani hat seinen Amtseid als erster US-Politiker auf den Koran statt auf die Bibel abgelegt. Der 34-Jährige, der die Wahl im November als Kandidat der Demokratischen Sozialisten gewann, nutzte dazu drei Koran-Exemplare. Im Oktober hatte er Kritik ausgelöst, weil er sich mit dem islamistischen Prediger Siraj Wahhaj treffen und dabei fotografieren ließ.",
     }
   ],
   "Außenpolitik": [
+    {
+      "title": "Terror gegen Israel: Bei UN-Veranstaltung gedenkt Baerbock einem Hamas-Mörder",
+      "url": "https://apollo-news.net/bei-un-veranstaltung-baerbock-gedenkt-hamas-mrder/",
+      "description": "Bei einer UN-Gedenkveranstaltung für getötete UN-Mitarbeitende, an der Annalena Baerbock als Präsidentin der UN-Generalversammlung teilnahm, wurde auch der Name des früheren UNRWA-Lehrers und Schulleiters Imad El Samhouri verlesen. In einem Hamas-Video wird er als Feldkommandeur der Kassam-Brigaden dargestellt. UN-Watch-Direktor Hillel Neuer forderte Generalsekretär Guterres und Baerbock auf, die Würdigung zurückzunehmen.",
+    },
+    {
+      "title": "UN-Sicherheitsrat: Kompetenzüberschreitung – USA werfen Annalena Baerbock „Heuchelei“ vor",
+      "url": "https://apollo-news.net/kompetenzberschreitung-usa-werfen-un-prsidentin-baerbock-heuchelei-vor/",
+      "description": "Die USA und Russland haben die Präsidentin der UN-Generalversammlung scharf kritisiert: Washington wirft Baerbock vor, bei der Auswahl des nächsten UN-Generalsekretärs ihre Kompetenzen überschritten zu haben. Auslöser war eine von ihr organisierte Kandidatendebatte, nach der sie den Sicherheitsrat aufforderte, nur Bewerber zu berücksichtigen, die daran teilgenommen hatten. Die US-Diplomatin Jennifer Locetta sprach von „Heuchelei“, der russische Botschafter Nebensja äußerte Sorge über Baerbocks Rollenverständnis.",
+    },
+    {
+      "title": "Wahl des UN-Generalsekretärs: Baerbock will Kandidaten aussortieren und löst einen Eklat aus",
+      "url": "https://jungefreiheit.de/politik/ausland/2026/baerbock-will-kandidaten-aussortieren-und-loest-einen-eklat-aus/",
+      "description": "USA und Russland werfen der scheidenden UN-Generalversammlungspräsidentin Annalena Baerbock vor, sich in die Wahl des Generalsekretärs einzumischen. Baerbock hatte den Sicherheitsrat aufgefordert, Bewerber um die Guterres-Nachfolge nur zu berücksichtigen, wenn sie zuvor vor der Generalversammlung aufgetreten sind. Die US-Diplomatin Jennifer Locetta nannte das eine „Kompetenzüberschreitung“.",
+    },
+    {
+      "title": "Nächster Karriereschritt: Baerbock wechselt an New Yorker Skandal-Uni",
+      "url": "https://jungefreiheit.de/politik/ausland/2026/baerbock-wechselt-an-new-yorker-skandal-uni/",
+      "description": "Nach dem Ende ihrer Amtszeit als Präsidentin der UN-Generalversammlung im September bleibt Annalena Baerbock in New York und soll an der zuletzt heftig umstrittenen Columbia University lehren. Die Professur für „Global Leadership“ trägt den Titel „Professor of Professional Practice“, der für Praktiker vorgesehen ist und keine klassische Forscherkarriere voraussetzt. Die Stelle ist auf drei Jahre angelegt.",
+    },
+    {
+      "title": "New York: Dröge fliegt in die USA und trifft Baerbock",
+      "url": "https://apollo-news.net/treffen-mit-jungen-progressiven-abgeordneten-drge-fliegt-in-die-usa-und-trifft-baerbock/",
+      "description": "Die Grünen-Fraktionschefin Katharina Dröge hat auf einer Reise in die Vereinigten Staaten in New York ihre Parteikollegin Annalena Baerbock getroffen. Nach eigenen Angaben sprach sie außerdem mit „jungen progressiven Abgeordneten aus Harlem und Brooklyn“. Zuvor hatte sie die Politik von Präsident Donald Trump wiederholt scharf kritisiert.",
+    },
+    {
+      "title": "Nach Versagen als Außenministerin: Annalena Baerbocks Flucht in die USA",
+      "url": "https://apollo-news.net/nach-versagen-als-aussenministerin-annalena-baerbocks-flucht-in-die-usa/",
+      "description": "Als Kanzlerkandidatin versprach Baerbock den Deutschen eine rosige Zukunft, als Außenministerin blamierte sie das Land – so der Kommentar von Benedikt Brechtken. Nun flüchte sie in die USA, um sich den Konsequenzen der grünen Politik zu entziehen.",
+    },
+    {
+      "title": "Neuer Job in New York: Baerbock gibt ihr Bundestagsmandat ab – und kassiert weiter",
+      "url": "https://jungefreiheit.de/politik/deutschland/2025/baerbock-gibt-ihr-bundestagsmandat-ab-und-kassiert-weiter/",
+      "description": "Annalena Baerbock legte ihr Bundestagsmandat zum 1. Juli nieder, nachdem sie Anfang Juni zur Präsidentin der UN-Generalversammlung gewählt worden war. Bis Ende Juni erhielt sie weiterhin monatlich 11.227,20 Euro Diäten plus steuerfreie Kostenpauschale. Deutschland trägt laut Bericht außerdem ihr Grundgehalt in New York von rund 13.000 Euro sowie die Miete für ihre dortige Wohnung.",
+    },
+    {
+      "title": "Return Hubs: „Schande für Europa“ – Linke, Sozialdemokraten und Grüne empören sich wegen neuer Migrationsverordnung",
+      "url": "https://apollo-news.net/schande-fuer-europa-linke-sozialdemokraten-und-gruene-empoeren-sich-nach-neuer-migrationsverordnung/",
+      "description": "Das EU-Parlament hat einer Rückführungsverordnung zugestimmt, die Abschiebungen aus der EU beschleunigen soll und unter anderem sogenannte Return Hubs in Drittstaaten vorsieht. Die Mehrheit kam mit Stimmen der EVP und der ESN-Fraktion zustande. Die europäische Linksfraktion bezeichnete die Abstimmung als „eine Schande für Europa“.",
+    },
     {
       "title": "Nach Deutschlands UN-Blamage : Afrikaner treten gegen Baerbock nach",
       "url": "https://www.bild.de/politik/ausland-und-internationales/nach-deutschlands-un-blamage-jetzt-treten-afrikaner-gegen-baerbock-nach-6a22bf539e32e33bafd53698",
