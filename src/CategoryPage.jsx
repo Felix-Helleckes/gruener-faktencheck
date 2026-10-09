@@ -225,9 +225,11 @@ function CategoryPage() {
 
       {/* Kategorien mit Expand/Collapse */}
       {Object.entries(articles).map(([cat, list]) => {
-        const filteredList = search.trim() 
+        const term = search.toLowerCase();
+        const filteredList = search.trim()
           ? list.filter(article =>
-              article.title.toLowerCase().includes(search.toLowerCase())
+              article.title.toLowerCase().includes(term) ||
+              (article.description || "").toLowerCase().includes(term)
             )
           : list;
 

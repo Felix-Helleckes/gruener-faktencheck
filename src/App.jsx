@@ -95,15 +95,19 @@ function App() {
     }
   };
 
-  // Filtert alle Artikel nach Suchbegriff (in Titel)
-  const filteredArticles = useMemo(() => Object.fromEntries(
-    Object.entries(articles).map(([category, list]) => [
-      category,
-      list.filter(article =>
-        article.title.toLowerCase().includes(search.toLowerCase())
-      ),
-    ])
-  ), [search]);
+  // Filtert alle Artikel nach Suchbegriff (in Titel und Beschreibung)
+  const filteredArticles = useMemo(() => {
+    const term = search.toLowerCase();
+    return Object.fromEntries(
+      Object.entries(articles).map(([category, list]) => [
+        category,
+        list.filter(article =>
+          article.title.toLowerCase().includes(term) ||
+          (article.description || "").toLowerCase().includes(term)
+        ),
+      ])
+    );
+  }, [search]);
 
   // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird, sonst zuklappen
   useEffect(() => {
