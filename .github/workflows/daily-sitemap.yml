@@ -36,7 +36,7 @@ jobs:
           git config --local user.name "GitHub Action"
 
           # Alle generierten SEO-Dateien hinzufügen
-          git add public/sitemap.xml public/sitemapUE.xml public/feed.xml
+          git add -A public/
 
           # Commit nur wenn Änderungen vorhanden sind
           git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Sitemap & RSS-Feed (wöchentlich)" && git push)
