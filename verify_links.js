@@ -1,57 +1,112 @@
-// Verify that all URLs from articles.js match articles-enhanced.js
-const articlesOriginal = require('./src/articles.js').articles;
-const articlesEnhanced = require('./src/articles-enhanced.js').articles;
+#!/usr/bin/env node
+/**
+ * Struktur-Check für src/articles-enhanced.js.
+ *
+ * Prüft die Datenqualität des Archivs, ohne das Netz anzufassen:
+ *   - Pflichtfelder (title, url) vorhanden und nicht leer
+ *   - URLs syntaktisch gültig und http(s)
+ *   - keine doppelten URLs (auch kategorieübergreifend)
+ *   - keine leeren Beschreibungen
+ *   - Beschreibung ist nicht bloß eine Kopie des Titels
+ *
+ * Aufruf:  node verify_links.js
+ * Exit-Code 1, wenn Fehler gefunden wurden (Warnungen allein sind okay).
+ *
+ * Für die Erreichbarkeit der Links siehe scripts/check_links.js
+ * (wird wöchentlich von .github/workflows/link-check.yml ausgeführt).
+ */
 
-let errors = [];
-let matches = 0;
+const fs = require('fs');
+const path = require('path');
+const vm = require('vm');
+
+const SRC = path.join(__dirname, 'src', 'articles-enhanced.js');
+
+function loadArticles() {
+  const src = fs.readFileSync(SRC, 'utf8');
+  const transformed = src.replace(/^\s*export\s+const\s+articles\s*=\s*/m, 'const articles = ');
+  const sandbox = {};
+  vm.createContext(sandbox);
+  try {
+    vm.runInContext(transformed + '\n;globalThis.__ARTICLES__ = articles;', sandbox, { timeout: 5000 });
+    return sandbox.__ARTICLES__ || {};
+  } catch (err) {
+    console.error('❌ PARSE-FEHLER in src/articles-enhanced.js:');
+    console.error('   ' + (err && err.message ? err.message : err));
+    process.exit(2);
+  }
+}
+
+const errors = [];
+const warnings = [];
+const articles = loadArticles();
+const seenUrls = new Map();
+
 let total = 0;
 
-for (const category in articlesOriginal) {
-  const originalCount = articlesOriginal[category].length;
-  const enhancedCount = articlesEnhanced[category] ? articlesEnhanced[category].length : 0;
-  
+for (const [category, list] of Object.entries(articles)) {
+  const entries = Array.isArray(list) ? list : [];
   console.log(`\n📋 Kategorie: ${category}`);
-  console.log(`   Original: ${originalCount} Artikel`);
-  console.log(`   Enhanced: ${enhancedCount} Artikel`);
-  
-  if (originalCount !== enhancedCount) {
-    errors.push(`❌ ${category}: Unterschiedliche Anzahl (${originalCount} vs ${enhancedCount})`);
-  }
-  
-  // Check each article
-  articlesOriginal[category].forEach((origArticle, index) => {
+  console.log(`   ${entries.length} Artikel`);
+
+  entries.forEach((article, index) => {
     total++;
-    const enhancedArticle = articlesEnhanced[category] ? 
-      articlesEnhanced[category][index] : null;
-    
-    if (!enhancedArticle) {
-      errors.push(`❌ ${category}[${index}]: Artikel fehlt in enhanced`);
+    const where = `${category}[${index}]`;
+    const title = (article && article.title) || '';
+    const url = (article && article.url) || '';
+    const description = (article && article.description) || '';
+
+    if (!title.trim()) errors.push(`❌ ${where}: title fehlt oder ist leer`);
+    if (!url.trim()) {
+      errors.push(`❌ ${where}: url fehlt oder ist leer (${title.slice(0, 60)})`);
       return;
     }
-    
-    // Compare URLs
-    if (origArticle.url === enhancedArticle.url) {
-      matches++;
+
+    let parsed = null;
+    try {
+      parsed = new URL(url);
+    } catch {
+      errors.push(`❌ ${where}: ungültige URL -> ${url}`);
+      return;
+    }
+    if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+      errors.push(`❌ ${where}: URL ist kein http(s) -> ${url}`);
+    }
+
+    if (seenUrls.has(url)) {
+      errors.push(`❌ ${where}: doppelte URL, schon in ${seenUrls.get(url)} -> ${url}`);
     } else {
-      errors.push(`❌ ${category}[${index}]: URL unterschiedlich`);
-      console.log(`   Original: ${origArticle.url}`);
-      console.log(`   Enhanced: ${enhancedArticle.url}`);
+      seenUrls.set(url, where);
+    }
+
+    if (!description.trim()) {
+      warnings.push(`⚠️  ${where}: leere description (${title.slice(0, 60)})`);
+    } else if (description.trim() === title.trim()) {
+      warnings.push(`⚠️  ${where}: description ist identisch mit dem Titel (${title.slice(0, 60)})`);
     }
   });
 }
 
-console.log(`\n${'='.repeat(60)}`);
-console.log(`✅ VERIFIKATIONSERGEBNIS:`);
-console.log(`   Insgesamt geprüft: ${total} Artikel`);
-console.log(`   URLs korrekt: ${matches}/${total}`);
-console.log(`    Match-Rate: ${((matches/total)*100).toFixed(1)}%`);
-console.log(`${'='.repeat(60)}\n`);
+const line = '='.repeat(60);
+console.log(`\n${line}`);
+console.log('✅ VERIFIKATIONSERGEBNIS:');
+console.log(`   Artikel geprüft:  ${total}`);
+console.log(`   Eindeutige URLs:  ${seenUrls.size}`);
+console.log(`   Fehler:           ${errors.length}`);
+console.log(`   Warnungen:        ${warnings.length}`);
+console.log(line);
 
-if (errors.length > 0) {
-  console.log(`⚠️  FEHLER GEFUNDEN (${errors.length}):`);
-  errors.forEach(err => console.log(`   ${err}`));
-  process.exit(1);
-} else {
-  console.log(`✅ ALLE LINKS SIND IDENTISCH! Alle URLs wurden korrekt übernommen.`);
-  process.exit(0);
+if (warnings.length) {
+  console.log(`\n⚠️  WARNUNGEN (${warnings.length}):`);
+  warnings.forEach(w => console.log(`   ${w}`));
 }
+
+if (errors.length) {
+  console.log(`\n❌ FEHLER (${errors.length}):`);
+  errors.forEach(e => console.log(`   ${e}`));
+  console.log('');
+  process.exit(1);
+}
+
+console.log('\n✅ Keine Fehler gefunden – die Artikeldaten sind sauber.\n');
+process.exit(0);

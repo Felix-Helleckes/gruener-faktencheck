@@ -1,0 +1,85 @@
+name: Link-Check (wöchentlich)
+
+on:
+  schedule:
+    # Jeden Montag um 05:00 UTC (06:00/07:00 MEZ/MESZ)
+    - cron: '0 5 * * 1'
+  workflow_dispatch:  # Manuelle Ausführung möglich
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Artikeldaten validieren
+        run: node verify_links.js
+
+      - name: Links prüfen
+        id: linkcheck
+        run: |
+          set +e
+          node scripts/check_links.js --json link-report.json --markdown link-report.md
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Report als Artefakt sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-report
+          path: |
+            link-report.json
+            link-report.md
+          if-no-files-found: ignore
+
+      - name: Issue anlegen oder aktualisieren
+        if: steps.linkcheck.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="🔗 Defekte Links im Archiv"
+
+          # Label anlegen, falls es noch nicht existiert
+          gh label create link-rot --color D93F0B --description "Tote Links im Artikel-Archiv" 2>/dev/null || true
+
+          EXISTING=$(gh issue list --state open --label link-rot --limit 1 --json number --jq '.[0].number')
+
+          if [ -n "$EXISTING" ]; then
+            echo "Bestehendes Issue #$EXISTING wird aktualisiert."
+            gh issue comment "$EXISTING" --body-file link-report.md
+          else
+            echo "Neues Issue wird angelegt."
+            gh issue create --title "$TITLE" --label link-rot --body-file link-report.md
+          fi
+
+      - name: Offenes Issue schließen, wenn alles wieder sauber ist
+        if: steps.linkcheck.outputs.exit_code == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh issue list --state open --label link-rot --limit 1 --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "✅ Alle Links im Archiv sind wieder erreichbar – automatisch geschlossen."
+          else
+            echo "Keine defekten Links, kein offenes Issue. Nichts zu tun."
+          fi
+
+      - name: Ergebnis in die Job-Summary schreiben
+        if: always()
+        run: |
+          if [ -f link-report.md ]; then
+            cat link-report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "✅ Keine defekten Links gefunden." >> "$GITHUB_STEP_SUMMARY"
+          fi
