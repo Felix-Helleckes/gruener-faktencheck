@@ -1,4 +1,4 @@
-name: Daily Sitemap Generation & Article Sync
+name: Sitemap & RSS-Feed (wöchentlich)
 
 on:
   schedule:
@@ -14,31 +14,31 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
-      - name: Generate Sitemap and Static HTML
+
+      - name: Generate Sitemap and RSS Feed
         run: |
-          echo "📄 Generiere Sitemap und statisches HTML..."
+          echo "📄 Generiere Sitemap und RSS-Feed..."
           python scripts/generate_sitemap.py
-          python scripts/generate_static_html.py
-      
+          python scripts/generate_rss.py
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Füge alle generierten Dateien hinzu
-          git add public/sitemap.xml
-          
+
+          # Alle generierten SEO-Dateien hinzufügen
+          git add public/sitemap.xml public/sitemapUE.xml public/feed.xml
+
           # Commit nur wenn Änderungen vorhanden sind
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Article Sync + Sitemap (Daily)" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Sitemap & RSS-Feed (wöchentlich)" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

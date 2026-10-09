@@ -49,10 +49,10 @@ jobs:
           git config --local user.name "GitHub Action"
           
           # Füge alle generierten Dateien hinzu
-          git add public/sitemap.xml public/feed.xml
-          
+          git add public/sitemap.xml public/sitemapUE.xml public/feed.xml
+
           # Commit nur wenn Änderungen vorhanden sind
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Article Sync + SEO Files (Deploy)" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: SEO-Dateien (Sitemap, RSS) nach Deploy" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
