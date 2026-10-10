@@ -4,6 +4,29 @@ on:
   push:
     branches:
       - main
+    # Jeder Production Deploy kostet rund 15 Credits. Änderungen, die nicht im
+    # ausgelieferten Build landen, sollen deshalb keinen auslösen.
+    # GitHub überspringt einen Push nur, wenn ALLE geänderten Dateien hier
+    # passen – ein Commit, der auch src/ anfasst, baut weiterhin.
+    #
+    # Bewusst NICHT aufgeführt, weil im Build enthalten:
+    #   index.html, GFLogo.png (Favicon), src/**, public/**,
+    #   scripts/** (erzeugt sitemap.xml und feed.xml), package*.json
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - 'docs/**'
+      - '.github/**'
+      - '.githooks/**'
+      - 'deploy.sh'
+      - 'deploy.bat'
+      - 'setup-hooks.js'
+      - 'setup-hooks.sh'
+      - 'setup-hooks.bat'
+      - 'verify_links.js'
+      - 'verify-cloudflare.js'
+      - 'merge_articles.js'
   workflow_dispatch:
 
 permissions:
