@@ -1,6 +1,21 @@
-/* Netlify _redirects file: Leitet alle Anfragen an index.html weiter, damit React Router funktioniert */
-/* Kategorie-Unterseiten, Artikel-Unterseiten, etc. funktionieren so auch als Direktlink */
-/* Syntax: <from> <to> <status> */
+# Netlify _redirects
+# Syntax: <from> <to> <status>
+# Wichtig: Kommentare beginnen mit "#". Zeilen, die mit "/*" anfangen, werden
+# von Netlify als Regel gelesen, nicht als Kommentar.
+# Die erste passende Regel gewinnt, der Catch-all muss deshalb zuletzt stehen.
 
-# Catch-all für Single Page App
+# 1) Domain-Vereinheitlichung
+# Beide Domains zeigen auf dieselbe Netlify-Site und lieferten bisher beide
+# HTTP 200. Dadurch konkurrieren identische Inhalte unter zwei Adressen in der
+# Suche. Kanonisch ist die Umlaut-Domain (so zeigen es auch alle
+# canonical-/og:url-Tags); hier in Punycode notiert, damit die Datei reines
+# ASCII bleibt: xn--grner-faktencheck-32b.de = grüner-faktencheck.de
+# Das "!" erzwingt die Weiterleitung auch für vorhandene Dateien.
+# Die www-Varianten leitet Netlify bereits selbst auf die Primärdomain um.
+http://gruener-faktencheck.de/*    https://xn--grner-faktencheck-32b.de/:splat    301!
+https://gruener-faktencheck.de/*   https://xn--grner-faktencheck-32b.de/:splat    301!
+
+# 2) Catch-all für die Single Page App
+# Leitet alle übrigen Anfragen an index.html, damit React Router auch bei
+# Direktaufruf von /category/... funktioniert.
 /*    /index.html   200

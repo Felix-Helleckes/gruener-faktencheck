@@ -194,42 +194,24 @@ if __name__ == "__main__":
             f.write(sitemap_content)
         print(f"[OK] Sitemap generated: {sitemap_path}")
 
-        # Sitemap für ue-Domain
-        sitemap_content_ue, _, _ = generate_sitemap(categories, static_pages, domain=SITE_DOMAIN_UE)
+        # Die ASCII-Domain gruener-faktencheck.de wird per 301 auf die
+        # kanonische Umlaut-Domain umgeleitet (siehe public/_redirects).
+        # Eine zweite Sitemap dafür wäre ein Widerspruch zu den canonical-Tags
+        # und würde identische Inhalte doppelt zur Indexierung anmelden.
+        # Altbestände entfernen, inklusive abweichender Gross-/Kleinschreibung.
         sitemap_dir = Path(__file__).parent.parent / "public"
-        sitemap_path_ue = sitemap_dir / "sitemapue.xml"
-        # Auf Windows ist das Dateisystem case-preserving; entferne bestehende Datei mit anderer Schreibweise
         try:
             for p in sitemap_dir.iterdir():
-                if p.is_file() and p.name.lower() == 'sitemapue.xml' and p.name != 'sitemapue.xml':
+                if p.is_file() and p.name.lower() == "sitemapue.xml":
                     p.unlink()
-        except Exception:
-            pass
-        with open(sitemap_path_ue, 'w', encoding='utf-8') as f:
-            f.write(sitemap_content_ue)
-        print(f"[OK] Sitemap generated: {sitemap_path_ue}")
-
-        # Ping Google und Bing für beide Sitemaps
-        try:
-            import urllib.request
-            import urllib.parse
-            def idna_url(u):
-                p = urllib.parse.urlparse(u)
-                host = p.netloc.encode('idna').decode('ascii')
-                return f"{p.scheme}://{host}"
-
-            for domain, sitemap_file in [(SITE_DOMAIN, "sitemap.xml"), (SITE_DOMAIN_UE, "sitemapue.xml")]:
-                domain_for_ping = idna_url(domain)
-                google_ping = f"https://www.google.com/ping?sitemap={domain_for_ping}/{sitemap_file}"
-                bing_ping = f"https://www.bing.com/webmaster/ping.aspx?siteMap={domain_for_ping}/{sitemap_file}"
-                for url in (google_ping, bing_ping):
-                    try:
-                        resp = urllib.request.urlopen(url, timeout=10)
-                        print(f"[OK] Pinged: {url} -> {resp.getcode()}")
-                    except Exception as pe:
-                        print(f"[WARN] Ping failed: {url} -> {pe}")
+                    print(f"[OK] Entfernt (nicht mehr benoetigt): {p}")
         except Exception as e:
-            print(f"[WARN] Ping skipped: {e}")
+            print(f"[WARN] Aufraeumen uebersprungen: {e}")
+
+        # Hinweis: Das Anpingen von Google und Bing wurde entfernt.
+        # Google hat den Sitemap-Ping im Juni 2023 abgeschaltet (HTTP 404),
+        # Bing beantwortet ihn mit HTTP 410 Gone. Beide Dienste lesen die
+        # Sitemap ueber robots.txt und die Search Console.
 
         print(f"[OK] Kategorien mit Artikel-Zahl:")
         for cat, count in sorted(cat_data.items(), key=lambda x: x[1], reverse=True):
@@ -237,15 +219,17 @@ if __name__ == "__main__":
         print(f"[OK] Statische Seiten:")
         for cat, url in static_data.items():
             print(f"     - {cat}: {url}")
-        print(f"[OK] Sitemap URLs:")
+        print(f"[OK] Sitemap URL:")
         print(f"  - {SITE_DOMAIN}/sitemap.xml")
-        print(f"  - {SITE_DOMAIN_UE}/sitemapue.xml")
         print(f"\n[INFO] NÄCHSTE SCHRITTE:")
         print(f"1. Gehen Sie zu: https://search.google.com/search-console")
-        print(f"2. Registrieren Sie Ihre Domains (falls noch nicht getan)")
+        print(f"2. Registrieren Sie {SITE_DOMAIN} als Property")
         print(f"3. Gehen Sie zu: Sitemaps")
-        print(f"4. Tragen Sie ein: {SITE_DOMAIN}/sitemap.xml und {SITE_DOMAIN_UE}/sitemapue.xml")
+        print(f"4. Tragen Sie ein: {SITE_DOMAIN}/sitemap.xml")
         print(f"5. Klicken Sie: 'Absenden'")
+        print(f"\n[INFO] {SITE_DOMAIN_UE} leitet per 301 hierher weiter und")
+        print(f"       braucht keine eigene Sitemap. Eine dort bereits")
+        print(f"       eingereichte sitemapue.xml in der Search Console entfernen.")
         print(f"\n[DONE] Das war's! Google wird Ihre Artikel jetzt regelmäßig crawlen.")
     except Exception as e:
         print(f"[ERROR] Error: {e}")
