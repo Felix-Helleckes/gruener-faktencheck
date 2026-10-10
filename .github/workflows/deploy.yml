@@ -51,8 +51,12 @@ jobs:
           # Füge alle generierten Dateien hinzu
           git add -A public/
 
-          # Commit nur wenn Änderungen vorhanden sind
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: SEO-Dateien (Sitemap, RSS) nach Deploy" && git push)
+          # Commit nur wenn Änderungen vorhanden sind.
+          # "[skip ci]" ist wichtig: ohne den Marker löst dieser Push den
+          # Workflow erneut aus und erzeugt einen zweiten Production Deploy,
+          # obwohl der Build oben die generierten Dateien bereits enthält.
+          # Das kostet bei kreditbasierten Plänen doppelt.
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: SEO-Dateien (Sitemap, RSS) nach Deploy [skip ci]" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       

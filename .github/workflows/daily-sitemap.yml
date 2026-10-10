@@ -38,7 +38,12 @@ jobs:
           # Alle generierten SEO-Dateien hinzufügen
           git add -A public/
 
-          # Commit nur wenn Änderungen vorhanden sind
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Sitemap & RSS-Feed (wöchentlich)" && git push)
+          # Commit nur wenn Änderungen vorhanden sind.
+          # "[skip ci]" verhindert, dass dieser Push einen Production Deploy
+          # auslöst. Die aufgefrischten Dateien liegen damit im Repo und gehen
+          # beim nächsten inhaltlichen Push mit live. Das spart bei
+          # kreditbasierten Plänen einen Deploy pro Woche, der nur den
+          # lastmod-Zeitstempel verschieben würde.
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Sitemap & RSS-Feed (wöchentlich) [skip ci]" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
