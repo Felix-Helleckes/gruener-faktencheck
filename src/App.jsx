@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 import { categoryToSlug } from "./category-seo";
+import { formatDate } from "./date-utils";
 import { useLocation } from "react-router-dom";
 
 function getDomain(url) {
@@ -186,6 +187,7 @@ function App() {
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <div className="nav-left">
           <a href="https://grüner-faktencheck.de/" title="Startseite">Startseite</a>
+          <Link to="/chronik" title="Chronologische Übersicht aller Vorgänge">Chronik</Link>
           <button
             onClick={() => setDarkmode(!darkmode)}
             className="theme-toggle-btn-nav"
@@ -271,7 +273,7 @@ function App() {
                     )}
                     {(article.date || article.source) && (
                       <p className="article-meta">
-                        {article.date && <span>{article.date}</span>}
+                        {article.date && <time dateTime={article.date}>{formatDate(article.date)}</time>}
                         {article.date && article.source && <span className="meta-separator"> • </span>}
                         {article.source && <span>{article.source}</span>}
                       </p>

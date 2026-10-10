@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 import { categoryToSlug, resolveCategoryKey } from "./category-seo";
+import { formatDate } from "./date-utils";
 
 function getDomain(url) {
   try {
@@ -253,7 +254,7 @@ function CategoryPage() {
                   <h3>{article.title}</h3>
                   {(article.date || article.source) && (
                     <p className="article-meta">
-                      {article.date && <span>{article.date}</span>}
+                      {article.date && <time dateTime={article.date}>{formatDate(article.date)}</time>}
                       {article.date && article.source && <span className="meta-separator"> • </span>}
                       {article.source && <span>{article.source}</span>}
                     </p>

@@ -180,6 +180,15 @@ def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
         sitemap_lines.append('    <changefreq>daily</changefreq>')
         sitemap_lines.append(f'    <priority>{priority}</priority>')
         sitemap_lines.append('  </url>')
+
+    # Chronik: chronologische Gesamtuebersicht aller Eintraege
+    sitemap_lines.append('  <url>')
+    sitemap_lines.append(f'    <loc>{domain}/chronik</loc>')
+    sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
+    sitemap_lines.append('    <changefreq>weekly</changefreq>')
+    sitemap_lines.append('    <priority>0.9</priority>')
+    sitemap_lines.append('  </url>')
+
     sitemap_lines.append('</urlset>')
     return '\n'.join(sitemap_lines), categories, static_pages
 

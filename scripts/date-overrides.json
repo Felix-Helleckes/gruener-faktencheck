@@ -1,0 +1,18 @@
+{
+  "_hinweis": "Manuelle Korrekturen zu scripts/fetch_dates.js. Wird von scripts/apply_dates.js gelesen und hat Vorrang vor dem automatisch ermittelten Datum. 'date': null bedeutet bewusst kein Datum. Jeder Eintrag braucht eine Begruendung, damit spaeter nachvollziehbar bleibt, warum von der Quelle abgewichen wurde.",
+
+  "https://www.medienservice.sachsen.de/medien/news/1088002": {
+    "date": "2025-06-10",
+    "grund": "Die Seite liefert zwei <meta name='date'>-Felder. Das erste (2019-09-05 19:55:17) ist ein Template-Rest, das zweite (10.06.2025 10:00) ist das echte Datum der Meldung. Am 10.10.2026 direkt auf der Seite geprueft."
+  },
+
+  "https://jungefreiheit.de/politik/deutschland/2026/130-000-euro-nachzahlung-gehalts-trick-der-gruenen-fliegt-auf/": {
+    "date": null,
+    "grund": "Widerspruechliche Angaben: article:published_time nennt 2019-07-03T22:37:19+02:00, der URL-Pfad dagegen 2026. Die Seite selbst zeigt beim Abruf nur das jeweilige Tagesdatum. Ohne belastbare Quelle bleibt das Feld leer."
+  },
+
+  "https://de.m.wikipedia.org/wiki/Putzgruppe?utm_source=chatgpt.comc": {
+    "date": null,
+    "grund": "Das JSON-LD datePublished (2006-03-21) ist das Anlagedatum des Wikipedia-Artikels, kein Veroeffentlichungsdatum im Sinne einer Meldung. Als Datum in einer Chronik waere das irrefuehrend."
+  }
+}
