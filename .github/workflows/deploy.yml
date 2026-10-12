@@ -62,7 +62,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          # Gleiche Version wie der Netlify-Build (Oberfläche: Node.js 22.x),
+          # damit der Probe-Build dieselben Fehler findet.
+          node-version: '22'
           cache: 'npm'
 
       - name: Setup Python
