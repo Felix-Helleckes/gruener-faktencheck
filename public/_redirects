@@ -15,7 +15,13 @@
 http://gruener-faktencheck.de/*    https://xn--grner-faktencheck-32b.de/:splat    301!
 https://gruener-faktencheck.de/*   https://xn--grner-faktencheck-32b.de/:splat    301!
 
-# 2) Catch-all für die Single Page App
+# 2) Vorgerenderte Seiten mit eigenen Meta-Tags (Chronik, Kategorien, Artikel)
+# Die Zeile darunter ersetzt scripts/prerender.js beim Build durch eine
+# 200-Rewrite-Regel pro Seite, etwa: /chronik  /_prerender/chronik.html  200
+# Nicht entfernen – ohne sie bricht der Build bewusst ab.
+# @@PRERENDER_RULES@@
+
+# 3) Catch-all für die Single Page App
 # Leitet alle übrigen Anfragen an index.html, damit React Router auch bei
 # Direktaufruf von /category/... funktioniert.
 /*    /index.html   200

@@ -152,42 +152,74 @@ def extract_categories_and_articles_from_js():
 
     return categories
 
+def load_flat_articles():
+    """Artikel mit Slug, Kategorie und Datum über scripts/articles_json.js.
+
+    Nutzt dieselbe Slug-Logik wie React (src/article-slug.js), damit die
+    Sitemap nur Adressen enthält, die die App auch kennt. Ohne Node wird die
+    Sitemap ohne Artikelseiten erzeugt.
+    """
+    helper = Path(__file__).parent / 'articles_json.js'
+    if not (which('node') and helper.exists()):
+        print('[WARN] Node nicht verfügbar – Artikelseiten fehlen in der Sitemap.', file=sys.stderr)
+        return []
+    try:
+        proc = subprocess.run(['node', str(helper)], capture_output=True, text=True, timeout=30)
+        if proc.returncode == 0 and proc.stdout:
+            return json.loads(proc.stdout)
+        print(f'[WARN] articles_json.js fehlgeschlagen: {proc.stderr.strip()}', file=sys.stderr)
+    except Exception as e:
+        print(f'[WARN] articles_json.js Fehler: {e}', file=sys.stderr)
+    return []
+
+
+def newest_date(items, fallback=None):
+    """Jüngstes Artikeldatum (YYYY-MM-DD) oder fallback."""
+    dates = [a['date'] for a in items if a.get('date')]
+    return max(dates) if dates else fallback
+
+
+def url_entry(loc, lastmod, changefreq, priority):
+    lines = ['  <url>', f'    <loc>{loc}</loc>']
+    # lastmod nur, wenn ein echtes Datum bekannt ist – ein erfundenes
+    # "heute" lässt Google dem Feld insgesamt weniger vertrauen
+    if lastmod:
+        lines.append(f'    <lastmod>{lastmod}</lastmod>')
+    lines += [f'    <changefreq>{changefreq}</changefreq>', f'    <priority>{priority}</priority>', '  </url>']
+    return lines
+
+
 def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
-    """Generate sitemap XML content with SEO optimization"""
+    """Generate sitemap XML content with SEO optimization
+
+    lastmod ist das Datum des jüngsten Berichts der jeweiligen Seite statt
+    des Tagesdatums. Die Sitemap ändert sich damit nur, wenn sich am Bestand
+    tatsächlich etwas ändert.
+    """
+    articles = load_flat_articles()
+    today = datetime.now().strftime("%Y-%m-%d")
+
     sitemap_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
-        '  <url>',
-        f'    <loc>{domain}/</loc>',
-        f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>',
-        '    <changefreq>daily</changefreq>',
-        '    <priority>1.0</priority>',
-        '  </url>',
     ]
-    # Nur Kategorie-Unterseiten aufnehmen
+    sitemap_lines += url_entry(f'{domain}/', newest_date(articles, today), 'daily', '1.0')
+
     max_articles = max(categories.values()) if categories else 1
     for category, article_count in sorted(categories.items(), key=lambda x: x[1], reverse=True):
-        if domain == SITE_DOMAIN_UE:
-            category_slug = category_to_slug_ue(category)
-        else:
-            category_slug = category_to_slug(category)
-        category_url = f"{domain}/category/{category_slug}"
+        category_slug = category_to_slug(category)
         # Priority based on article count (more articles = higher priority)
         priority = round(0.7 + (article_count / max_articles) * 0.25, 2)
-        sitemap_lines.append('  <url>')
-        sitemap_lines.append(f'    <loc>{category_url}</loc>')
-        sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
-        sitemap_lines.append('    <changefreq>daily</changefreq>')
-        sitemap_lines.append(f'    <priority>{priority}</priority>')
-        sitemap_lines.append('  </url>')
+        in_cat = [a for a in articles if a['category'] == category]
+        sitemap_lines += url_entry(f'{domain}/category/{category_slug}', newest_date(in_cat, today), 'daily', priority)
 
-    # Chronik: chronologische Gesamtuebersicht aller Eintraege
-    sitemap_lines.append('  <url>')
-    sitemap_lines.append(f'    <loc>{domain}/chronik</loc>')
-    sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
-    sitemap_lines.append('    <changefreq>weekly</changefreq>')
-    sitemap_lines.append('    <priority>0.9</priority>')
-    sitemap_lines.append('  </url>')
+    # Chronik: chronologische Gesamtübersicht aller Einträge
+    sitemap_lines += url_entry(f'{domain}/chronik', newest_date(articles, today), 'weekly', '0.9')
+
+    # Eine Seite pro Artikel; lastmod = Erscheinungsdatum des Berichts
+    for a in articles:
+        if a.get('slug'):
+            sitemap_lines += url_entry(f"{domain}/artikel/{a['slug']}", a.get('date'), 'monthly', '0.6')
 
     sitemap_lines.append('</urlset>')
     return '\n'.join(sitemap_lines), categories, static_pages

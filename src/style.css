@@ -609,3 +609,78 @@ body.darkmode .article-teaser h3 {
     page-break-inside: avoid;
   }
 }
+/* ===== Artikelseite (/artikel/<slug>) ===== */
+.article-page .article-teaser h1 {
+  text-align: left;
+  font-size: 1.7em;
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin: 0 0 0.5em 0;
+}
+.article-source-note {
+  margin: 1.2em 0 0;
+  font-size: 0.85em;
+  color: #777;
+}
+body.darkmode .article-source-note {
+  color: #9aa5a0;
+}
+
+/* Vor-/Zurück-Navigation zwischen Vorgängen */
+.article-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin: 2em 0 1em;
+}
+.article-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s;
+}
+.article-nav-link:hover {
+  border-color: #217c3b;
+}
+.article-nav-older {
+  text-align: right;
+}
+.article-nav-label {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #217c3b;
+}
+body.darkmode .article-nav-link {
+  border-color: #333;
+}
+body.darkmode .article-nav-link:hover {
+  border-color: #7fdca4;
+}
+body.darkmode .article-nav-label {
+  color: #7fdca4;
+}
+@media (max-width: 600px) {
+  .article-page .article-teaser h1 {
+    font-size: 1.3em;
+  }
+  .article-nav {
+    grid-template-columns: 1fr;
+  }
+  .article-nav-older {
+    text-align: left;
+  }
+}
+
+/* Titel in Listen verlinken auf die Artikelseite, sehen aber aus wie bisher */
+.article-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+.article-title-link:hover {
+  text-decoration: underline;
+}

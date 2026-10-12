@@ -73,7 +73,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          # Wie bei Netlify: Pillow für scripts/generate_og_images.py
+          pip install -r requirements.txt
 
       - name: Generate SEO files (Sitemap, RSS, Static HTML)
         run: |

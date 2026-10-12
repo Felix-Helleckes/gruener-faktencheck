@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate && vite build",
+    "build": "npm run generate && vite build && node scripts/prerender.js",
     "preview": "vite preview",
-    "generate": "python scripts/generate_sitemap.py && python scripts/generate_rss.py && python scripts/generate_static_html.py",
+    "generate": "python scripts/generate_sitemap.py && python scripts/generate_rss.py && python scripts/generate_static_html.py && python scripts/generate_og_images.py",
     "setup-hooks": "node setup-hooks.js"
   },
   "dependencies": {

@@ -4,6 +4,9 @@ import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 import { categoryToSlug, resolveCategoryKey } from "./category-seo";
 import { formatDate } from "./date-utils";
+import { buildSlugMap } from "./article-slug";
+
+const slugMap = buildSlugMap(articles);
 
 function getDomain(url) {
   try {
@@ -251,7 +254,11 @@ function CategoryPage() {
             {filteredList.length > 0 ? (
               filteredList.map((article, idx) => (
                 <div className="article-teaser" key={`${cat}-${article.url}-${idx}`}>
-                  <h3>{article.title}</h3>
+                  <h3>
+                    <Link to={`/artikel/${slugMap.get(article.url)}`} className="article-title-link">
+                      {article.title}
+                    </Link>
+                  </h3>
                   {(article.date || article.source) && (
                     <p className="article-meta">
                       {article.date && <time dateTime={article.date}>{formatDate(article.date)}</time>}

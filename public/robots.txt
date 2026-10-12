@@ -1,28 +1,39 @@
 User-agent: *
 Allow: /
+# Interne Kopien der vorgerenderten Seiten. Ausgeliefert werden sie unter
+# ihren echten Adressen (/chronik, /artikel/...) per Rewrite.
+# Steht auch in jeder eigenen Crawler-Gruppe unten, weil Crawler nur die
+# spezifischste passende Gruppe befolgen und "*" dann ignorieren.
+Disallow: /_prerender/
 Sitemap: https://grüner-faktencheck.de/sitemap.xml
 
 # Google Specific
 User-agent: Googlebot
 Allow: /
+Disallow: /_prerender/
 
 User-agent: Googlebot-Image
 Allow: /
+Disallow: /_prerender/
 
 User-agent: Googlebot-Extended
 Allow: /
+Disallow: /_prerender/
 
 # Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /_prerender/
 
 # Yandex
 User-agent: YandexBot
 Allow: /
+Disallow: /_prerender/
 
 # Apple
 User-agent: Applebot
 Allow: /
+Disallow: /_prerender/
 
 # Bad Bots
 User-agent: MJ12bot

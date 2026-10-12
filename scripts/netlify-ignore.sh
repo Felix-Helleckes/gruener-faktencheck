@@ -14,8 +14,9 @@
 #   GFLogo.png                  -> Favicon, in index.html eingebunden
 #   scripts/                    -> erzeugt sitemap.xml und feed.xml
 #   package*.json               -> Abhängigkeiten und Build-Befehl
+#   requirements.txt            -> Pillow für die Vorschaubilder
 #   netlify.toml                -> kann Redirects, Header und Plugins setzen
-WATCHED=(src public index.html GFLogo.png scripts package.json package-lock.json netlify.toml)
+WATCHED=(src public index.html GFLogo.png scripts package.json package-lock.json requirements.txt netlify.toml)
 
 # Kein Vergleichs-Commit: erster Build oder "Deploy without cache".
 if [ -z "${CACHED_COMMIT_REF:-}" ] || [ -z "${COMMIT_REF:-}" ]; then

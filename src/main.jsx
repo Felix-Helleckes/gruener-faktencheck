@@ -8,6 +8,7 @@ import "./style.css";
 const CategoryPage = lazy(() => import("./CategoryPage"));
 const ArticleDetail = lazy(() => import("./ArticleDetail"));
 const Chronik = lazy(() => import("./Chronik"));
+const ArticlePage = lazy(() => import("./ArticlePage"));
 
 // Fallback Loading Component
 const LoadingFallback = () => (
@@ -20,6 +21,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route
+        path="/artikel/:slug"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <ArticlePage />
+          </Suspense>
+        }
+      />
       <Route
         path="/chronik"
         element={

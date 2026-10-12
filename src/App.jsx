@@ -4,6 +4,9 @@ import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 import { categoryToSlug } from "./category-seo";
 import { formatDate } from "./date-utils";
+import { buildSlugMap } from "./article-slug";
+
+const slugMap = buildSlugMap(articles);
 import { useLocation } from "react-router-dom";
 
 function getDomain(url) {
@@ -267,7 +270,11 @@ function App() {
               {openCategories[category] &&
                 list.map((article, idx) => (
                   <div className="article-teaser" key={article.url || idx}>
-                    <h3>{article.title}</h3>
+                    <h3>
+                      <Link to={`/artikel/${slugMap.get(article.url)}`} className="article-title-link">
+                        {article.title}
+                      </Link>
+                    </h3>
                     {article.description && (
                       <p className="article-description">{article.description}</p>
                     )}

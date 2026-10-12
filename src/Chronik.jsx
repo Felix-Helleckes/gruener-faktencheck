@@ -4,6 +4,9 @@ import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 import { categoryToSlug } from "./category-seo";
 import { formatDate, getYear, sortByDateDesc } from "./date-utils";
+import { buildSlugMap } from "./article-slug";
+
+const slugMap = buildSlugMap(articles);
 
 function getDomain(url) {
   try {
@@ -109,7 +112,7 @@ function Chronik() {
     "name": "Chronik – Grüner Faktencheck",
     "url": "https://grüner-faktencheck.de/chronik",
     "description":
-      "Chronologische Übersicht aller im Archiv dokumentierten Vorgänge zur Partei BÜNDNIS 90/DIE GRÜNEN, nach Jahr sortiert.",
+      "Chronologische Übersicht aller im Archiv dokumentierten Berichte zur Partei BÜNDNIS 90/DIE GRÜNEN, nach Jahr sortiert.",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Grüner Faktencheck",
@@ -124,19 +127,20 @@ function Chronik() {
   return (
     <div className="container">
       <Helmet>
-        <title>Chronik – Grüner Faktencheck | Alle Vorgänge nach Jahr</title>
+        <title>Chronik – Grüner Faktencheck | Alle Berichte nach Jahr</title>
         <meta
           name="description"
-          content="Chronik des Grünen Faktenchecks: alle dokumentierten Vorgänge zur Partei BÜNDNIS 90/DIE GRÜNEN chronologisch nach Jahr sortiert, mit Quelle und Datum."
+          content="Chronik des Grünen Faktenchecks: alle dokumentierten Berichte zur Partei BÜNDNIS 90/DIE GRÜNEN chronologisch nach Jahr sortiert, mit Quelle und Datum."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://grüner-faktencheck.de/chronik" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://grüner-faktencheck.de/chronik" />
+        <meta property="og:image" content="https://xn--grner-faktencheck-32b.de/og-chronik.jpg" />
         <meta property="og:title" content="Chronik – Grüner Faktencheck" />
         <meta
           property="og:description"
-          content="Alle dokumentierten Vorgänge zur Partei BÜNDNIS 90/DIE GRÜNEN, chronologisch nach Jahr sortiert."
+          content="Alle dokumentierten Berichte zur Partei BÜNDNIS 90/DIE GRÜNEN, chronologisch nach Jahr sortiert."
         />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
@@ -159,7 +163,7 @@ function Chronik() {
       <div className="hero-section">
         <h1>Chronik</h1>
         <p className="tagline">
-          Alle {total} dokumentierten Vorgänge zur Partei Bündnis 90/Die Grünen, chronologisch nach Jahr
+          Alle {total} dokumentierten Berichte zur Partei Bündnis 90/Die Grünen, chronologisch nach Jahr
         </p>
       </div>
 
@@ -172,7 +176,7 @@ function Chronik() {
 
       {/* Jahresübersicht, zugleich Sprungmarken */}
       <div className="category-stats">
-        <h2>Vorgänge pro Jahr</h2>
+        <h2>Berichte pro Jahr</h2>
         <div className="stats-grid">
           {orderedYears.map((y) => (
             <div
@@ -183,7 +187,7 @@ function Chronik() {
               role="button"
               onClick={() => jumpToYear(y)}
               onKeyDown={(e) => handleYearKey(e, y)}
-              aria-label={`${groups[y].length} Vorgänge im Jahr ${y}`}
+              aria-label={`${groups[y].length} Berichte im Jahr ${y}`}
             >
               <strong>{groups[y].length}</strong>
               <span>{y}</span>
@@ -209,7 +213,11 @@ function Chronik() {
           {openYears[y] &&
             groups[y].map((article, idx) => (
               <div className="article-teaser" key={`${article.url}-${idx}`}>
-                <h3>{article.title}</h3>
+                <h3>
+                  <Link to={`/artikel/${slugMap.get(article.url)}`} className="article-title-link">
+                    {article.title}
+                  </Link>
+                </h3>
                 <p className="article-meta">
                   {article.date && (
                     <>

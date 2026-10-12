@@ -90,7 +90,8 @@
       "@type": "WebSite",
       "name": "Grüner Faktencheck",
       "url": "https://grüner-faktencheck.de/",
-      "description": "Unabhängige Faktenchecks und Analysen zur Grünen Partei Deutschland.",
+      "description": "Unabhängige Analyse und Faktenchecks zur Grünen Partei Deutschland",
+      "inLanguage": "de",
       "publisher": {
         "@type": "Organization",
         "name": "Grüner Faktencheck",
@@ -98,14 +99,7 @@
           "@type": "ImageObject",
           "url": "https://grüner-faktencheck.de/og-image.jpg"
         }
-      }
-    }
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Grüner Faktencheck",
-      "description": "Unabhängige Analyse und Faktenchecks zur Grünen Partei Deutschland",
-      "url": "https://grüner-faktencheck.de",
-      "inLanguage": "de",
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -139,20 +133,16 @@
       "@type": "NewsMediaOrganization",
       "name": "Grüner Faktencheck",
       "url": "https://grüner-faktencheck.de",
-      "logo": "https://grüner-faktencheck.de/logo.png",
+      "logo": "https://grüner-faktencheck.de/og-image.jpg",
       "description": "Unabhängiger Faktenchecker für Grüne Politik Deutschland",
       "inLanguage": "de",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+49",
-        "contactType": "Editorial"
-      },
       "sameAs": ["https://grüner-faktencheck.de"]
     }
     </script>
 
-    <!-- Schema.org CollectionPage -->
-    <script type="application/ld+json">
+    <!-- Schema.org CollectionPage (seitenspezifisch: scripts/prerender.js ersetzt
+         diesen Block auf Chronik-, Kategorie- und Artikelseiten) -->
+    <script type="application/ld+json" id="page-jsonld">
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
