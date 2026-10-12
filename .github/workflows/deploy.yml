@@ -1,13 +1,30 @@
-name: Build & Deploy
+name: Build-Check & SEO-Dateien
+
+# Dieser Workflow deployt NICHT.
+# Veröffentlicht wird ausschließlich über Netlifys eigene GitHub-Integration:
+# Jeder Push auf main löst dort einen Build aus (npm run build -> dist).
+# Ob der Build nötig ist, entscheidet netlify.toml / scripts/netlify-ignore.sh.
+#
+# Hier passiert nur zweierlei:
+#   1. Ein Probe-Build, der Fehler im Actions-Tab sichtbar macht.
+#   2. Die generierten SEO-Dateien (sitemap.xml, feed.xml) werden ins Repo
+#      zurückgeschrieben, damit der Stand dort aktuell bleibt.
+#
+# Früher stand hier ein Schritt "Deploy to Netlify" (nwtgck/actions-netlify).
+# Weil die Secrets NETLIFY_AUTH_TOKEN und NETLIFY_SITE_ID nie gesetzt waren,
+# brach er sofort ab ("Netlify credentials not provided, not deployable") und
+# meldete trotzdem success. Er wurde entfernt.
+# Die Secrets bitte NICHT nachtragen: Dann würde jeder Push zweimal deployen,
+# einmal über Netlify und einmal hier – zu je 15 Credits.
 
 on:
   push:
     branches:
       - main
-    # Jeder Production Deploy kostet rund 15 Credits. Änderungen, die nicht im
-    # ausgelieferten Build landen, sollen deshalb keinen auslösen.
+    # Spart überflüssige Workflow-Läufe bei Änderungen, die den Build nicht
+    # betreffen. Credits spart das nicht – das regelt netlify.toml.
     # GitHub überspringt einen Push nur, wenn ALLE geänderten Dateien hier
-    # passen – ein Commit, der auch src/ anfasst, baut weiterhin.
+    # passen – ein Commit, der auch src/ anfasst, läuft weiterhin.
     #
     # Bewusst NICHT aufgeführt, weil im Build enthalten:
     #   index.html, GFLogo.png (Favicon), src/**, public/**,
@@ -33,61 +50,52 @@ permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build-check:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Generate SEO files (Sitemap, RSS, Static HTML)
         run: |
           echo "📄 Generiere Sitemap, RSS und statisches HTML..."
           npm run generate
-      
-      - name: Build React app
+
+      - name: Probe-Build
         run: |
-          echo "🏗️ Baue React-App..."
+          echo "🏗️ Probe-Build (veröffentlicht wird über Netlify)..."
           npm run build
-      
+
       - name: Commit generated files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
+
           # Füge alle generierten Dateien hinzu
           git add -A public/
 
           # Commit nur wenn Änderungen vorhanden sind.
-          # "[skip ci]" ist wichtig: ohne den Marker löst dieser Push den
-          # Workflow erneut aus und erzeugt einen zweiten Production Deploy,
-          # obwohl der Build oben die generierten Dateien bereits enthält.
-          # Das kostet bei kreditbasierten Plänen doppelt.
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: SEO-Dateien (Sitemap, RSS) nach Deploy [skip ci]" && git push)
+          # "[skip ci]" ist wichtig: Netlify baut jeden Push auf main. Ohne den
+          # Marker würde dieser Auto-Commit einen zweiten Production Deploy
+          # auslösen (15 Credits), obwohl Netlify die Dateien beim Build ohnehin
+          # selbst erzeugt. Netlify und GitHub Actions respektieren den Marker.
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: SEO-Dateien (Sitemap, RSS) [skip ci]" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3
-        with:
-          publish-dir: './dist'
-          production-deploy: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

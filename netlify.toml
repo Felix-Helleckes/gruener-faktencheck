@@ -1,0 +1,13 @@
+# Netlify-Konfiguration für grüner-faktencheck.de
+#
+# Build-Befehl (npm run build), Publish-Verzeichnis (dist), Base-Verzeichnis (/)
+# und Node-Version bleiben in der Netlify-Oberfläche verwaltet. Werte aus dieser
+# Datei überschreiben nur die gleichnamigen Einstellungen dort – hier steht
+# bewusst nur die ignore-Regel.
+
+[build]
+  # Überspringt den Build, wenn sich seit dem letzten Deploy nichts an
+  # buildrelevanten Dateien geändert hat (README, docs/, Workflows, lokale
+  # Hilfsskripte). Ein Production Deploy kostet auf dem Free-Plan 15 von
+  # 300 Credits im Monat. Logik und Ausnahmen: scripts/netlify-ignore.sh
+  ignore = "bash ./scripts/netlify-ignore.sh"
