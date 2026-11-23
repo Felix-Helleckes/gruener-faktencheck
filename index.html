@@ -61,15 +61,12 @@
     <meta name="apple-mobile-web-app-title" content="Grüner Faktencheck">
 
     <!-- DNS Prefetch & Performance -->
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- Google Analytics (geladen nur nach Einwilligung) -->
+    <!-- Google Analytics: wird nur nach Einwilligung geladen -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}      
-      function loadGtag(){
+      window.loadGtag = function(){
         if (window._gtag_loaded) return;
         window._gtag_loaded = true;
         var s = document.createElement('script');
@@ -79,8 +76,8 @@
         gtag('js', new Date());
         gtag('config', 'G-46XGZG1CKJ');
       }
-      // Lade GA automatisch - Datenschutz im Footer deklariert
-      loadGtag();
+      // Nur nach Einwilligung im Banner (src/ConsentBanner.jsx, § 25 TDDDG)
+      try { if (localStorage.getItem('analytics-consent') === 'granted') window.loadGtag(); } catch (e) {}
     </script>
 
     <!-- Schema.org JSON-LD - Strukturierte Daten für Google -->

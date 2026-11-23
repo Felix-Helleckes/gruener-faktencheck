@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
+import ConsentBanner from "./ConsentBanner";
 import "./style.css";
 
 // Lazy Load CategoryPage (wird nur bei Bedarf geladen)
@@ -9,6 +10,7 @@ const CategoryPage = lazy(() => import("./CategoryPage"));
 const ArticleDetail = lazy(() => import("./ArticleDetail"));
 const Chronik = lazy(() => import("./Chronik"));
 const ArticlePage = lazy(() => import("./ArticlePage"));
+const Datenschutz = lazy(() => import("./Datenschutz"));
 
 // Fallback Loading Component
 const LoadingFallback = () => (
@@ -21,6 +23,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route
+        path="/datenschutz"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <Datenschutz />
+          </Suspense>
+        }
+      />
       <Route
         path="/artikel/:slug"
         element={
@@ -54,5 +64,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         }
       />
     </Routes>
+    <ConsentBanner />
   </BrowserRouter>
 );

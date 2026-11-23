@@ -684,3 +684,70 @@ body.darkmode .article-nav-label {
 .article-title-link:hover {
   text-decoration: underline;
 }
+
+/* Einwilligungs-Banner (Google Analytics nur mit Zustimmung) */
+.consent-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  background: #ffffff;
+  color: #1f2933;
+  border: 1px solid #cbd2d9;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  z-index: 1000;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+.consent-banner p {
+  margin: 0 0 12px;
+}
+.consent-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+/* Beide Buttons bewusst gleichwertig gestaltet */
+.consent-buttons button {
+  flex: 1 1 140px;
+  padding: 10px 16px;
+  font-size: 1em;
+  font-weight: 600;
+  border: 2px solid #2e7d32;
+  border-radius: 6px;
+  background: #2e7d32;
+  color: #ffffff;
+  cursor: pointer;
+}
+body.darkmode .consent-banner {
+  background: #1f2933;
+  color: #e4e7eb;
+  border-color: #3e4c59;
+}
+
+/* Link-artiger Button im Footer ("Cookie-Einstellungen") */
+.footer-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Datenschutzseite */
+.legal-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+.legal-page h2 {
+  margin-top: 1.6em;
+  font-size: 1.2em;
+}
