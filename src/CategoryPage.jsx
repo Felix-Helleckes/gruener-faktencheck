@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import SiteFooter from "./SiteFooter";
 import { useParams, Link } from "react-router-dom";
 import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
@@ -302,19 +303,7 @@ function CategoryPage() {
         </button>
       )}
 
-      <footer>
-        <p>
-          Erstellt von:{" "}
-          <a href="https://www.youtube.com/@reallifemitfelix" target="_blank" rel="noopener noreferrer">
-            Felix H.
-          </a>{" "}
-          |{" "}
-          <a href="https://paypal.me/Sparky512" target="_blank" rel="noopener noreferrer">
-            Trinkgeld via PayPal
-          </a>
-        </p>
-        <p>&copy; {year}</p>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
