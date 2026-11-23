@@ -327,7 +327,11 @@ function App() {
         <p>
           Erstellt von:{" "}
           <a href="https://www.youtube.com/@reallifemitfelix" target="_blank" rel="noopener noreferrer">
-            Felix H. - Impressum
+            Felix H.
+          </a>{" "}
+          |{" "}
+          <a href="https://mein.online-impressum.de/reallifemitfelix/" target="_blank" rel="noopener noreferrer">
+            Impressum
           </a>{" "}
           |{" "}
           <a href="https://paypal.me/Sparky512" target="_blank" rel="noopener noreferrer">
