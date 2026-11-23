@@ -35,11 +35,11 @@ export default function Datenschutz() {
         <br />
         Felix Florian Helleckes
         <br />
-        c/o Online-Impressum 13381
+        c/o ZERODOX
         <br />
-        Europaring 90
+        Gulisastraße 93
         <br />
-        53757 Sankt Augustin
+        56072 Koblenz
         <br />
         E-Mail: <a href="mailto:fhelleckes@gmail.com">fhelleckes@gmail.com</a>
         <br />

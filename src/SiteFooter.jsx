@@ -1,7 +1,7 @@
 import React from "react";
 import { openConsentSettings } from "./consent";
 
-export const IMPRESSUM_URL = "https://mein.online-impressum.de/reallifemitfelix/";
+export const IMPRESSUM_URL = "https://zerodox.de/creator/reallifemitfelix/impressum";
 
 export default function SiteFooter() {
   const year = new Date().getFullYear();

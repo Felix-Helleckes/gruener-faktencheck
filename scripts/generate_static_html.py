@@ -112,7 +112,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <footer>
         <p>Erstellt von: <a href="https://www.youtube.com/@reallifemitfelix" target="_blank">Felix H.</a> | 
         <a href="https://paypal.me/Sparky512" target="_blank">Trinkgeld via PayPal</a></p>
-        <p><a href="https://mein.online-impressum.de/reallifemitfelix/" target="_blank">Impressum</a> | <a href="/datenschutz">Datenschutz</a></p>
+        <p><a href="https://zerodox.de/creator/reallifemitfelix/impressum" target="_blank">Impressum</a> | <a href="/datenschutz">Datenschutz</a></p>
         <p>&copy; 2025 Grüner Faktencheck. Letzte Aktualisierung: {timestamp}</p>
     </footer>
 </body>
